@@ -33,7 +33,7 @@ const Navbar = () => {
                 ) : (
                     <>
                         <Link to="/login">Login</Link>
-                        <Link to="/register" className="btn btn-primary">Daftar Sekarang</Link>
+                        <Link to="/register" className="btn btn-primary" style={{ color: 'white' }}>Daftar Sekarang</Link>
                     </>
                 )}
             </div>

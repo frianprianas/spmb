@@ -161,10 +161,47 @@ const PaymentSection = ({ registration, onDone }) => {
     return (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             <h2>Tahap 3: Pembayaran</h2>
-            <div style={{ background: 'var(--glass)', padding: '1.5rem', borderRadius: '1rem', margin: '1.5rem 0' }}>
+
+            <div style={{ background: 'white', borderRadius: '1rem', border: '1px solid var(--border)', overflow: 'hidden', marginBottom: '2rem' }}>
+                <div style={{ padding: '1.5rem', background: 'linear-gradient(135deg, var(--primary), var(--secondary))', color: 'white' }}>
+                    <h3 style={{ margin: 0, fontSize: '1.2rem' }}>Rincian Biaya Pendidikan</h3>
+                </div>
+                <div style={{ padding: '1.5rem' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.5rem 0', borderBottom: '1px solid #e5e7eb' }}>
+                        <span>Formulir Pendaftaran</span>
+                        <span style={{ fontWeight: 600 }}>Rp 300.000</span>
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.5rem 0', borderBottom: '1px solid #e5e7eb' }}>
+                        <span>Dana Sumbangan Pendidikan (DSP)</span>
+                        <span style={{ fontWeight: 600 }}>Rp 3.775.000</span>
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.5rem 0', borderBottom: '1px solid #e5e7eb' }}>
+                        <span>Paket Seragam Sekolah</span>
+                        <span style={{ fontWeight: 600 }}>Rp 800.000</span>
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.5rem 0', borderBottom: '1px solid #e5e7eb' }}>
+                        <span>IPP / SPP Bulan Pertama</span>
+                        <span style={{ fontWeight: 600 }}>Rp 350.000</span>
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.5rem 0', borderBottom: '2px dashed #e5e7eb', marginBottom: '1rem' }}>
+                        <span>Kegiatan MPLS / MOPD</span>
+                        <span style={{ fontWeight: 600 }}>Rp 275.000</span>
+                    </div>
+                    <div style={{ background: '#f8fafc', padding: '1rem', borderRadius: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <span style={{ fontWeight: 'bold', color: 'var(--text-muted)' }}>Total Biaya</span>
+                        <span style={{ fontWeight: '900', color: 'var(--primary)', fontSize: '1.2rem' }}>Rp 5.500.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style={{ background: 'var(--glass)', padding: '1.5rem', borderRadius: '1rem', margin: '1.5rem 0', border: '1px solid var(--primary)' }}>
                 <p>Silakan transfer biaya pendaftaran ke rekening berikut:</p>
                 <h3 style={{ margin: '1rem 0', color: 'var(--primary)' }}>Bank Mandiri: 1310001611666<br /><span style={{ fontSize: '0.9rem' }}>(A/N Yayasan Pendidikan Dasar dan Menengah Bakti Nusantara)</span></h3>
-                <p style={{ fontSize: '0.9rem' }}>Nominal Minimal: <b>Rp 300.000</b> (Formulir)</p>
+                <div style={{ background: '#dbeafe', color: '#1e40af', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem' }}>
+                    <Info size={20} style={{ float: 'left', marginRight: '0.5rem' }} />
+                    <p style={{ margin: 0, fontWeight: 600 }}>Minimal Pembayaran: Rp 300.000</p>
+                    <p style={{ margin: 0, fontSize: '0.9rem' }}>Anda sudah bisa melanjutkan ke tahap pengisian formulir setelah membayar minimal biaya registrasi formulir.</p>
+                </div>
             </div>
 
             <div style={{ marginTop: '2rem' }}>
@@ -723,40 +760,80 @@ const ComprehensiveForm = ({ registration, onDone }) => {
 
 
 const FinalStatusSection = ({ registration }) => {
-    const pdfRef = useRef();
+    const pdfPage1Ref = useRef();
+    const pdfPage2Ref = useRef();
     const [downloading, setDownloading] = useState(false);
 
     const downloadPDF = async () => {
         setDownloading(true);
-        const element = pdfRef.current;
+        const page1 = pdfPage1Ref.current;
+        const page2 = pdfPage2Ref.current;
 
-        // Switch to light theme temp for PDF
-        element.style.color = '#000';
-        element.style.background = '#fff';
-        const badges = element.querySelectorAll('.badge');
-        badges.forEach(b => { b.style.color = '#000'; b.style.border = '1px solid #000'; });
+        // Temporary Styling fo PDF generation
+        const prepareElement = (el) => {
+            el.style.color = '#000';
+            el.style.background = '#fff';
+            const badges = el.querySelectorAll('.badge');
+            badges.forEach(b => { b.style.color = '#000'; b.style.border = '1px solid #000'; });
+        };
+
+        const restoreElement = (el) => {
+            el.style.color = '';
+            el.style.background = '';
+        };
+
+        prepareElement(page1);
+        prepareElement(page2);
 
         try {
-            const canvas = await html2canvas(element, { scale: 2, useCORS: true });
-            const imgData = canvas.toDataURL('image/png');
             const pdf = new jsPDF('p', 'mm', 'a4');
-            const imgProps = pdf.getImageProperties(imgData);
             const pdfWidth = pdf.internal.pageSize.getWidth();
-            const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+            const pdfHeight = pdf.internal.pageSize.getHeight();
 
-            pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+            // Page 1
+            const canvas1 = await html2canvas(page1, { scale: 2, useCORS: true });
+            const imgData1 = canvas1.toDataURL('image/png');
+            pdf.addImage(imgData1, 'PNG', 0, 0, pdfWidth, pdfHeight); // Fit to page
+
+            // Page 2
+            pdf.addPage();
+            const canvas2 = await html2canvas(page2, { scale: 2, useCORS: true });
+            const imgData2 = canvas2.toDataURL('image/png');
+            pdf.addImage(imgData2, 'PNG', 0, 0, pdfWidth, pdfHeight);
+
             pdf.save(`Formulir_SPMB_BN666_${registration.User?.name}.pdf`);
         } catch (err) {
             console.error('PDF Error:', err);
         } finally {
-            // Restore theme
-            element.style.color = '';
-            element.style.background = '';
+            restoreElement(page1);
+            restoreElement(page2);
             setDownloading(false);
         }
     };
 
     const d = registration.fullData || {};
+
+    const A4Style = {
+        padding: '40px',
+        textAlign: 'left',
+        width: '210mm',
+        minHeight: '297mm', // Force A4 height
+        margin: '0 auto',
+        backgroundColor: 'white',
+        color: 'black',
+        position: 'relative',
+        fontSize: '12px',
+        boxSizing: 'border-box'
+    };
+
+    const Header = () => (
+        <div style={{ textAlign: 'center', borderBottom: '3px double #000', paddingBottom: '10px', marginBottom: '20px' }}>
+            <h2 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold' }}>YAYASAN PENDIDIKAN BAKTI NUSANTARA 666</h2>
+            <h1 style={{ margin: '5px 0', fontSize: '22px', fontWeight: 'bold' }}>SMK BAKTI NUSANTARA 666</h1>
+            <p style={{ margin: 0, fontSize: '10px' }}>Jl. Raya Percobaan No. 65 KM 17 Cileunyi, Bandung. Telp: (022) 63730220</p>
+            <p style={{ margin: '10px 0 0 0', fontWeight: 'bold', fontSize: '14px' }}>FORMULIR PENDAFTARAN PESERTA DIDIK BARU 2026/2027</p>
+        </div>
+    );
 
     return (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ textAlign: 'center' }}>
@@ -771,101 +848,114 @@ const FinalStatusSection = ({ registration }) => {
 
                 <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '2rem', marginBottom: '3rem' }}>
                     <button onClick={downloadPDF} disabled={downloading} className="btn btn-primary">
-                        <Download size={18} /> {downloading ? 'Generating PDF...' : 'Download PDF Formulir'}
+                        <Download size={18} /> {downloading ? 'Generating PDF...' : 'Download PDF Formulir (2 Halaman)'}
                     </button>
-                    <button onClick={() => window.print()} className="btn" style={{ border: '1px solid var(--border)' }}>
-                        <Printer size={18} /> Cetak Langsung
-                    </button>
+                    {/* Print usually only prints visible, so we might need to handle print differently or rely on PDF print */}
                 </div>
             </div>
 
-            {/* PDF TEMPLATE (Hidden from normal view but used for snapshot) */}
-            <div ref={pdfRef} style={{
-                padding: '40px',
-                textAlign: 'left',
-                width: '210mm',
-                margin: '0 auto',
-                backgroundColor: 'white',
-                color: 'black',
-                borderRadius: '8px',
-                boxShadow: '0 0 20px rgba(0,0,0,0.1)',
-                position: 'relative',
-                fontSize: '12px'
-            }}>
-                <div style={{ textAlign: 'center', borderBottom: '3px double #000', paddingBottom: '10px', marginBottom: '20px' }}>
-                    <h2 style={{ margin: 0, fontSize: '18px' }}>YAYASAN PENDIDIKAN BAKTI NUSANTARA 666</h2>
-                    <h1 style={{ margin: '5px 0', fontSize: '22px' }}>SMK BAKTI NUSANTARA 666</h1>
-                    <p style={{ margin: 0, fontSize: '10px' }}>Jl. Raya Percobaan No. 65 KM 17 Cileunyi, Bandung. Telp: (022) 63730220</p>
-                    <p style={{ margin: '5px 0', fontWeight: 'bold' }}>FORMULIR PENDAFTARAN PESERTA DIDIK BARU 2026/2027</p>
-                </div>
+            {/* HIDDEN PREVIEW CONTAINER */}
+            <div style={{ position: 'absolute', top: '-10000px', left: '-10000px' }}>
 
-                <div style={{ marginBottom: '20px' }}>
-                    <h3 style={{ background: '#eee', padding: '5px', fontSize: '13px' }}>FORMAT I: DATA PRIBADI SISWA</h3>
-                    <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-                        <tbody>
-                            <Row label="Nama Lengkap" value={d.namaLengkap} />
-                            <Row label="NISN" value={registration.User?.nisn} />
-                            <Row label="Jenis Kelamin" value={d.jenisKelamin} />
-                            <Row label="Tempat, Tgl Lahir" value={`${d.tempatLahir}, ${d.tglLahir}`} />
-                            <Row label="NIK" value={d.nik} />
-                            <Row label="No. KK" value={d.noKK} />
-                            <Row label="Agama" value={d.agama} />
-                            <Row label="Alamat" value={`${d.alamatLengkap} RT:${d.rt} RW:${d.rw}, ${d.desa}, ${d.kecamatan}, ${d.kabupaten}, ${d.provinsi}`} />
-                            <Row label="Sekolah Asal" value={d.asalSekolah} />
-                            <Row label="Jurusan Dipilih" value={registration.Department?.name} />
-                        </tbody>
-                    </table>
-                </div>
+                {/* PAGE 1: Format 1 & 2 */}
+                <div ref={pdfPage1Ref} style={A4Style}>
+                    <Header />
 
-                <div style={{ marginBottom: '20px' }}>
-                    <h3 style={{ background: '#eee', padding: '5px', fontSize: '13px' }}>FORMAT II: KETERANGAN SISWA</h3>
-                    <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-                        <tbody>
-                            <Row label="Nama Panggilan" value={d.namaPanggilan} />
-                            <Row label="Anak Ke" value={d.anakKe} />
-                            <Row label="Tinggi / Berat" value={`${d.tinggi} cm / ${d.berat} kg`} />
-                            <Row label="Hobby" value={d.hobby} />
-                            <Row label="Cita-cita" value={d.citaCita || '-'} />
-                            <Row label="Status Ortu" value={d.statusOrtu} />
-                        </tbody>
-                    </table>
-                </div>
-
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
-                    <div>
-                        <h3 style={{ background: '#eee', padding: '5px', fontSize: '13px' }}>DATA AYAH</h3>
-                        <table style={{ width: '100%' }}>
+                    {/* FORMAT I: DATA PRIBADI */}
+                    <div style={{ marginBottom: '20px' }}>
+                        <h3 style={{ background: '#eee', padding: '5px', fontSize: '13px', borderBottom: '1px solid #ccc', margin: '0 0 10px 0' }}>FORMAT I: DATA PRIBADI SISWA</h3>
+                        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                             <tbody>
-                                <Row label="Nama" value={d.namaAyah} />
-                                <Row label="Pekerjaan" value={d.pekerjaanAyah} />
-                                <Row label="WA" value={d.waAyah} />
+                                <Row label="Nama Lengkap" value={d.namaLengkap} />
+                                <Row label="NISN" value={registration.User?.nisn} />
+                                <Row label="Jenis Kelamin" value={d.jenisKelamin} />
+                                <Row label="Tempat, Tgl Lahir" value={`${d.tempatLahir}, ${d.tglLahir}`} />
+                                <Row label="NIK" value={d.nik} />
+                                <Row label="No. KK" value={d.noKK} />
+                                <Row label="Agama" value={d.agama} />
+                                <Row label="Alamat" value={`${d.alamatLengkap} RT:${d.rt} RW:${d.rw}, ${d.desa}, ${d.kecamatan}, ${d.kabupaten}, ${d.provinsi}`} />
+                                <Row label="Sekolah Asal" value={d.asalSekolah} />
+                                <Row label="Jurusan Dipilih" value={registration.Department?.name} />
                             </tbody>
                         </table>
                     </div>
-                    <div>
-                        <h3 style={{ background: '#eee', padding: '5px', fontSize: '13px' }}>DATA IBU</h3>
-                        <table style={{ width: '100%' }}>
+
+                    {/* FORMAT II: KETERANGAN SISWA */}
+                    <div style={{ marginBottom: '20px' }}>
+                        <h3 style={{ background: '#eee', padding: '5px', fontSize: '13px', borderBottom: '1px solid #ccc', margin: '0 0 10px 0' }}>FORMAT II: KETERANGAN SISWA</h3>
+                        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                             <tbody>
-                                <Row label="Nama" value={d.namaIbu} />
-                                <Row label="Pekerjaan" value={d.pekerjaanIbu} />
-                                <Row label="WA" value={d.waIbu} />
+                                <Row label="Nama Panggilan" value={d.namaPanggilan} />
+                                <Row label="Anak Ke" value={d.anakKe} />
+                                <Row label="Jumlah Saudara" value={`${d.jmlKakak || 0} Kakak, ${d.jmlAdik || 0} Adik`} />
+                                <Row label="Tinggi / Berat" value={`${d.tinggi || '-'} cm / ${d.berat || '-'} kg`} />
+                                <Row label="Hobby" value={d.hobby} />
+                                <Row label="Cita-cita" value={d.citaCita || '-'} />
+                                <Row label="Status Ortu" value={d.statusOrtu} />
                             </tbody>
                         </table>
                     </div>
                 </div>
 
-                <div style={{ marginTop: '50px', display: 'flex', justifyContent: 'space-between' }}>
-                    <div style={{ textAlign: 'center', width: '200px' }}>
-                        <p>Panitia P2DB</p>
-                        <br /><br /><br />
-                        <p>( ................................ )</p>
+                {/* PAGE 2: Format 3, 4, 5 */}
+                <div ref={pdfPage2Ref} style={A4Style}>
+                    <Header />
+
+                    {/* FORMAT III & IV: DATA ORANG TUA */}
+                    <div style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
+                        <div style={{ flex: 1 }}>
+                            <h3 style={{ background: '#eee', padding: '5px', fontSize: '13px', borderBottom: '1px solid #ccc', margin: '0 0 10px 0' }}>FORMAT III: DATA AYAH</h3>
+                            <table style={{ width: '100%' }}>
+                                <tbody>
+                                    <Row label="Nama" value={d.namaAyah} />
+                                    <Row label="TTL" value={d.tglLahirAyah} />
+                                    <Row label="Pekerjaan" value={d.pekerjaanAyah} />
+                                    <Row label="Penghasilan" value={d.penghasilanAyah} />
+                                    <Row label="No. WA" value={d.waAyah} />
+                                </tbody>
+                            </table>
+                        </div>
+                        <div style={{ flex: 1 }}>
+                            <h3 style={{ background: '#eee', padding: '5px', fontSize: '13px', borderBottom: '1px solid #ccc', margin: '0 0 10px 0' }}>FORMAT IV: DATA IBU</h3>
+                            <table style={{ width: '100%' }}>
+                                <tbody>
+                                    <Row label="Nama" value={d.namaIbu} />
+                                    <Row label="TTL" value={d.tglLahirIbu} />
+                                    <Row label="Pekerjaan" value={d.pekerjaanIbu} />
+                                    <Row label="Penghasilan" value={d.penghasilanIbu} />
+                                    <Row label="No. WA" value={d.waIbu} />
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                    <div style={{ textAlign: 'center', width: '200px' }}>
-                        <p>Calon Siswa</p>
-                        <br /><br /><br />
-                        <p>( <b>{registration.User?.name}</b> )</p>
+
+                    {/* FORMAT V: DATA WALI */}
+                    <div style={{ marginBottom: '30px' }}>
+                        <h3 style={{ background: '#eee', padding: '5px', fontSize: '13px', borderBottom: '1px solid #ccc', margin: '0 0 10px 0' }}>FORMAT V: DATA WALI (Jika Ada)</h3>
+                        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                            <tbody>
+                                <Row label="Nama Wali" value={d.namaWali} />
+                                <Row label="Hubungan" value={d.hubunganWali} />
+                                <Row label="Pekerjaan" value={d.pekerjaanWali} />
+                                <Row label="No. WA" value={d.waWali} />
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style={{ marginTop: '50px', display: 'flex', justifyContent: 'space-between', padding: '0 50px' }}>
+                        <div style={{ textAlign: 'center', width: '200px' }}>
+                            <p>Mengetahui,<br />Orang Tua / Wali Murid</p>
+                            <br /><br /><br /><br />
+                            <p>( ................................ )</p>
+                        </div>
+                        <div style={{ textAlign: 'center', width: '200px' }}>
+                            <p>Bandung, {new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}<br />Calon Siswa</p>
+                            <br /><br /><br /><br />
+                            <p>( <b>{registration.User?.name}</b> )</p>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </motion.div>
     );

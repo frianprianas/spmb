@@ -1,8 +1,10 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, ShieldCheck, CreditCard, FileText, MapPin, Phone, Mail, X } from 'lucide-react';
+import { ArrowRight, CheckCircle, ShieldCheck, CreditCard, FileText, MapPin, Phone, Mail, X, Instagram, Facebook, MessageCircle, Music, Wallet } from 'lucide-react';
 import schoolImg from '../assets/school.jpg';
+import hero2 from '../assets/hero_2.png';
+import hero3 from '../assets/hero_3.png';
 import flyerPemasaran from '../assets/flyer_pemasaran.jpg';
 import flyerAkl from '../assets/flyer_akl.jpg';
 import flyerPplg from '../assets/flyer_pplg.jpg';
@@ -10,6 +12,16 @@ import flyerDkvAnm from '../assets/flyer_dkv_anm.jpg';
 
 const Home = () => {
     const [selectedId, setSelectedId] = useState(null);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [showPricing, setShowPricing] = useState(false);
+    const heroImages = [schoolImg, hero2, hero3];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+        }, 3000);
+        return () => clearInterval(interval);
+    }, [heroImages.length]);
 
     const flyers = [
         { id: 1, img: flyerPplg, title: 'Pengembangan Perangkat Lunak & Gim' },
@@ -19,7 +31,42 @@ const Home = () => {
     ];
 
     return (
-        <div className="container">
+        <div className="container" style={{ position: 'relative', overflow: 'hidden' }}>
+            {/* Background Ornaments */}
+            <div style={{
+                position: 'absolute',
+                top: '-10%',
+                right: '-5%',
+                width: '600px',
+                height: '600px',
+                background: 'radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(255,255,255,0) 70%)',
+                borderRadius: '50%',
+                zIndex: -1,
+                pointerEvents: 'none'
+            }} />
+            <div style={{
+                position: 'absolute',
+                top: '40%',
+                left: '-10%',
+                width: '500px',
+                height: '500px',
+                background: 'radial-gradient(circle, rgba(244, 63, 94, 0.08) 0%, rgba(255,255,255,0) 70%)',
+                borderRadius: '50%',
+                zIndex: -1,
+                pointerEvents: 'none'
+            }} />
+            <div style={{
+                position: 'absolute',
+                bottom: '10%',
+                right: '10%',
+                width: '400px',
+                height: '400px',
+                background: 'radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, rgba(255,255,255,0) 70%)',
+                borderRadius: '50%',
+                zIndex: -1,
+                pointerEvents: 'none'
+            }} />
+
             {/* Hero Section */}
             <section style={{
                 display: 'grid',
@@ -37,28 +84,39 @@ const Home = () => {
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
                         <span className="badge badge-verified" style={{ padding: '0.5rem 1rem' }}>Pendaftaran 2026/2027 Dibuka</span>
                     </div>
-                    <h1 style={{ fontSize: '4.5rem', fontWeight: 900, lineHeight: 1.1, marginBottom: '2rem' }}>
-                        Membangun Masa Depan di <span style={{ color: 'var(--primary)' }}>SMK Bakti Nusantara 666</span>
+                    <h1 style={{ fontSize: '4rem', fontWeight: 900, lineHeight: 1.1, marginBottom: '2rem' }}>
+                        SPMB <span style={{ color: 'var(--primary)' }}>SMK Bakti Nusantara 666</span>
                     </h1>
                     <p style={{ color: 'var(--text-muted)', fontSize: '1.25rem', marginBottom: '3rem', lineHeight: 1.6 }}>
                         Sistem Penerimaan Murid Baru yang terintegrasi, transparan, dan sepenuhnya digital. Mulai langkah kesuksesanmu bersama sekolah vokasi terbaik.
                     </p>
-                    <div style={{ display: 'flex', gap: '1.5rem' }}>
-                        <Link to="/register" className="btn btn-primary" style={{ padding: '1.2rem 2.5rem', fontSize: '1.1rem' }}>
-                            Daftar Sekarang <ArrowRight size={20} />
+                    <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                        <Link to="/register" className="btn btn-primary" style={{ padding: '0.8rem 1.5rem', fontSize: '1rem' }}>
+                            Daftar Sekarang <ArrowRight size={18} />
                         </Link>
-                        <Link to="/login" className="btn" style={{ border: '1px solid var(--border)', padding: '1.2rem 2.5rem', fontSize: '1.1rem' }}>
-                            Masuk Dashboard
+                        <Link to="/login" className="btn" style={{ border: '1px solid var(--border)', padding: '0.8rem 1.5rem', fontSize: '1rem', background: 'white' }}>
+                            Masuk
                         </Link>
+                        <motion.button
+                            onClick={() => setShowPricing(true)}
+                            className="btn"
+                            style={{ border: '1px solid var(--primary)', color: 'var(--primary)', padding: '0.8rem 1.5rem', fontSize: '1rem', background: 'rgba(2, 132, 199, 0.1)' }}
+                            animate={{
+                                rotate: [0, -3, 3, -3, 3, 0],
+                                scale: [1, 1.02, 1]
+                            }}
+                            transition={{
+                                duration: 1.5,
+                                repeat: Infinity,
+                                repeatDelay: 3
+                            }}
+                        >
+                            <Wallet size={18} /> Rincian Biaya
+                        </motion.button>
                     </div>
                 </motion.div>
 
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.8, rotate: 2 }}
-                    animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                    transition={{ duration: 1 }}
-                    style={{ position: 'relative' }}
-                >
+                <div style={{ position: 'relative', height: '500px', width: '100%' }}>
                     <div style={{
                         position: 'absolute',
                         top: '-20px',
@@ -70,17 +128,29 @@ const Home = () => {
                         opacity: 0.1,
                         zIndex: -1
                     }}></div>
-                    <img
-                        src={schoolImg}
-                        alt="SMK Bakti Nusantara 666"
-                        style={{
-                            width: '100%',
-                            borderRadius: '2rem',
-                            boxShadow: 'var(--shadow)',
-                            objectFit: 'cover',
-                            height: '500px'
-                        }}
-                    />
+
+                    <AnimatePresence mode='wait'>
+                        <motion.img
+                            key={currentImageIndex}
+                            src={heroImages[currentImageIndex]}
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -20 }}
+                            transition={{ duration: 0.5 }}
+                            alt="SMK Bakti Nusantara 666"
+                            style={{
+                                width: '100%',
+                                height: '100%',
+                                borderRadius: '2rem',
+                                boxShadow: 'var(--shadow)',
+                                objectFit: 'cover',
+                                position: 'absolute',
+                                top: 0,
+                                left: 0
+                            }}
+                        />
+                    </AnimatePresence>
+
                     <div className="glass" style={{
                         position: 'absolute',
                         bottom: '30px',
@@ -89,7 +159,8 @@ const Home = () => {
                         display: 'flex',
                         alignItems: 'center',
                         gap: '1rem',
-                        maxWidth: '250px'
+                        maxWidth: '250px',
+                        zIndex: 10
                     }}>
                         <div style={{ background: '#10b981', padding: '0.8rem', borderRadius: '50%' }}>
                             <CheckCircle color="white" />
@@ -99,7 +170,7 @@ const Home = () => {
                             <p style={{ fontSize: '0.8rem', opacity: 0.7 }}>Sekolah Pusat Keunggulan</p>
                         </div>
                     </div>
-                </motion.div>
+                </div>
             </section>
 
             {/* Flyers Section */}
@@ -242,62 +313,122 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Pricing/Cost Section */}
-            <section style={{ padding: '0 0 80px 0' }}>
-                <div style={{ maxWidth: '900px', margin: '0 auto', background: 'white', color: '#1e293b', borderRadius: '2rem', boxShadow: 'var(--shadow)', overflow: 'hidden' }}>
-                    <div style={{ padding: '3rem', background: 'linear-gradient(135deg, var(--primary), var(--secondary))', color: 'white', textAlign: 'center' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }}>Investasi Pendidikan</h2>
-                        <p style={{ opacity: 0.9, fontSize: '1.1rem' }}>Rincian Biaya Penerimaan Murid Baru Tahun Pelajaran 2026/2027</p>
-                    </div>
-                    <div style={{ padding: '3rem' }}>
-                        <div style={{ marginBottom: '2rem' }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem 0', borderBottom: '1px solid #e5e7eb' }}>
-                                <span style={{ fontWeight: 500, fontSize: '1.1rem' }}>Formulir Pendaftaran</span>
-                                <span style={{ fontWeight: 600 }}>Rp 300.000</span>
-                            </div>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem 0', borderBottom: '1px solid #e5e7eb' }}>
-                                <span style={{ fontWeight: 500, fontSize: '1.1rem' }}>Dana Sumbangan Pendidikan (DSP)</span>
-                                <span style={{ fontWeight: 600 }}>Rp 3.775.000</span>
-                            </div>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem 0', borderBottom: '1px solid #e5e7eb' }}>
-                                <span style={{ fontWeight: 500, fontSize: '1.1rem' }}>Paket Seragam Sekolah</span>
-                                <span style={{ fontWeight: 600 }}>Rp 800.000</span>
-                            </div>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem 0', borderBottom: '1px solid #e5e7eb' }}>
-                                <span style={{ fontWeight: 500, fontSize: '1.1rem' }}>IPP / SPP Bulan Pertama</span>
-                                <span style={{ fontWeight: 600 }}>Rp 350.000</span>
-                            </div>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem 0', borderBottom: '2px dashed #e5e7eb' }}>
-                                <span style={{ fontWeight: 500, fontSize: '1.1rem' }}>Kegiatan MPLS / MOPD</span>
-                                <span style={{ fontWeight: 600 }}>Rp 275.000</span>
-                            </div>
-                        </div>
-
-                        <div style={{
-                            background: '#f8fafc',
-                            padding: '2rem',
-                            borderRadius: '1rem',
+            {/* Pricing Modal */}
+            <AnimatePresence>
+                {showPricing && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setShowPricing(false)}
+                        style={{
+                            position: 'fixed',
+                            top: 0,
+                            left: 0,
+                            width: '100%',
+                            height: '100%',
+                            background: 'rgba(0,0,0,0.7)',
+                            backdropFilter: 'blur(5px)',
                             display: 'flex',
-                            justifyContent: 'space-between',
                             alignItems: 'center',
-                            marginBottom: '2rem'
-                        }}>
-                            <div>
-                                <h3 style={{ margin: 0, color: 'var(--text-muted)', fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Total Biaya Masuk</h3>
-                            </div>
-                            <div style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--primary)' }}>
-                                Rp 5.500.000
-                            </div>
-                        </div>
+                            justifyContent: 'center',
+                            zIndex: 10000,
+                            padding: '1rem'
+                        }}
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0, y: 20 }}
+                            animate={{ scale: 1, opacity: 1, y: 0 }}
+                            exit={{ scale: 0.9, opacity: 0, y: 20 }}
+                            onClick={(e) => e.stopPropagation()}
+                            style={{
+                                background: 'white',
+                                borderRadius: '2rem',
+                                maxWidth: '800px',
+                                width: '100%',
+                                maxHeight: '90vh',
+                                overflowY: 'auto',
+                                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+                                position: 'relative'
+                            }}
+                        >
+                            <button
+                                onClick={() => setShowPricing(false)}
+                                style={{
+                                    position: 'absolute',
+                                    top: '1.5rem',
+                                    right: '1.5rem',
+                                    background: '#f1f5f9',
+                                    border: 'none',
+                                    borderRadius: '50%',
+                                    width: '40px',
+                                    height: '40px',
+                                    cursor: 'pointer',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    zIndex: 20
+                                }}
+                            >
+                                <X size={20} />
+                            </button>
 
-                        <div style={{ borderLeft: '4px solid #f59e0b', paddingLeft: '1.5rem', color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: 1.6 }}>
-                            <strong>Ketentuan Pembayaran:</strong>
-                            <br />
-                            Total biaya SPMB harus sudah lunas paling lambat tanggal <strong>10 Juli 2026</strong> atau satu minggu sebelum tanggal mulai masuk sekolah murid baru (tanggal mulai masuk sekolah akan diinformasikan kembali).
-                        </div>
-                    </div>
-                </div>
-            </section>
+                            <div style={{ padding: '3rem', background: 'linear-gradient(135deg, var(--primary), var(--secondary))', color: 'white', textAlign: 'center' }}>
+                                <h2 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '0.5rem' }}>Investasi Pendidikan</h2>
+                                <p style={{ opacity: 0.9 }}>Rincian Biaya Penerimaan Murid Baru 2026/2027</p>
+                            </div>
+
+                            <div style={{ padding: '3rem' }}>
+                                <div style={{ marginBottom: '2rem' }}>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem 0', borderBottom: '1px solid #e5e7eb' }}>
+                                        <span style={{ fontWeight: 500, fontSize: '1.1rem' }}>Formulir Pendaftaran</span>
+                                        <span style={{ fontWeight: 600 }}>Rp 300.000</span>
+                                    </div>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem 0', borderBottom: '1px solid #e5e7eb' }}>
+                                        <span style={{ fontWeight: 500, fontSize: '1.1rem' }}>Dana Sumbangan Pendidikan (DSP)</span>
+                                        <span style={{ fontWeight: 600 }}>Rp 3.775.000</span>
+                                    </div>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem 0', borderBottom: '1px solid #e5e7eb' }}>
+                                        <span style={{ fontWeight: 500, fontSize: '1.1rem' }}>Paket Seragam Sekolah</span>
+                                        <span style={{ fontWeight: 600 }}>Rp 800.000</span>
+                                    </div>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem 0', borderBottom: '1px solid #e5e7eb' }}>
+                                        <span style={{ fontWeight: 500, fontSize: '1.1rem' }}>IPP / SPP Bulan Pertama</span>
+                                        <span style={{ fontWeight: 600 }}>Rp 350.000</span>
+                                    </div>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem 0', borderBottom: '2px dashed #e5e7eb' }}>
+                                        <span style={{ fontWeight: 500, fontSize: '1.1rem' }}>Kegiatan MPLS / MOPD</span>
+                                        <span style={{ fontWeight: 600 }}>Rp 275.000</span>
+                                    </div>
+                                </div>
+
+                                <div style={{
+                                    background: '#f8fafc',
+                                    padding: '2rem',
+                                    borderRadius: '1rem',
+                                    display: 'flex',
+                                    justifyContent: 'space-between',
+                                    alignItems: 'center',
+                                    marginBottom: '2rem'
+                                }}>
+                                    <div>
+                                        <h3 style={{ margin: 0, color: 'var(--text-muted)', fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Total Biaya Masuk</h3>
+                                    </div>
+                                    <div style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--primary)' }}>
+                                        Rp 5.500.000
+                                    </div>
+                                </div>
+
+                                <div style={{ borderLeft: '4px solid #f59e0b', paddingLeft: '1.5rem', color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: 1.6 }}>
+                                    <strong>Ketentuan Pembayaran:</strong>
+                                    <br />
+                                    Total biaya SPMB harus sudah lunas paling lambat tanggal <strong>10 Juli 2026</strong>.
+                                </div>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
             {/* Info Section */}
             <section className="glass" style={{ padding: '4rem', marginBottom: '80px', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem', textAlign: 'center' }}>
@@ -315,6 +446,37 @@ const Home = () => {
                     <Mail size={32} color="var(--primary)" style={{ marginBottom: '1rem' }} />
                     <h3>Email</h3>
                     <p style={{ opacity: 0.7 }}>info@smkbn666.sch.id</p>
+                </div>
+            </section>
+
+            {/* Social Media Section - Added to Footer */}
+            <section style={{ textAlign: 'center', paddingBottom: '4rem' }}>
+                <h3 style={{ marginBottom: '1.5rem', color: 'var(--text-muted)' }}>Ikuti Kami di Sosial Media</h3>
+                <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
+                    <a href="https://instagram.com" target="_blank" rel="noreferrer" style={{ color: '#E1306C', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
+                        <div className="glass" style={{ padding: '1rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <Instagram size={24} />
+                        </div>
+                        <span style={{ fontSize: '0.9rem', fontWeight: 500, color: 'var(--text)' }}>Instagram</span>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noreferrer" style={{ color: '#1877F2', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
+                        <div className="glass" style={{ padding: '1rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <Facebook size={24} />
+                        </div>
+                        <span style={{ fontSize: '0.9rem', fontWeight: 500, color: 'var(--text)' }}>Facebook</span>
+                    </a>
+                    <a href="https://tiktok.com" target="_blank" rel="noreferrer" style={{ color: '#000000', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
+                        <div className="glass" style={{ padding: '1rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <Music size={24} />
+                        </div>
+                        <span style={{ fontSize: '0.9rem', fontWeight: 500, color: 'var(--text)' }}>TikTok</span>
+                    </a>
+                    <a href="https://wa.me/6282121635987" target="_blank" rel="noreferrer" style={{ color: '#25D366', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
+                        <div className="glass" style={{ padding: '1rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <MessageCircle size={24} />
+                        </div>
+                        <span style={{ fontSize: '0.9rem', fontWeight: 500, color: 'var(--text)' }}>WhatsApp</span>
+                    </a>
                 </div>
             </section>
         </div>

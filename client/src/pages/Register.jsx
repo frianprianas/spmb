@@ -3,7 +3,7 @@ import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import axios from 'axios';
-import loginBg from '../assets/login_bg.jpg';
+import registerBg from '../assets/register_bg.jpg';
 
 const Register = () => {
     const [formData, setFormData] = useState({
@@ -16,18 +16,44 @@ const Register = () => {
         sekolahAsal: '',
         departmentId: ''
     });
+    const [schools, setSchools] = useState([]);
+    const [filteredSchools, setFilteredSchools] = useState([]);
+    const [showSuggestions, setShowSuggestions] = useState(false);
     const [departments, setDepartments] = useState([]);
     const { register } = useAuth();
     const navigate = useNavigate();
 
     useEffect(() => {
         axios.get('http://localhost:5000/api/admin/departments').then(res => setDepartments(res.data)).catch(err => console.error(err));
+        // Fetch schools data
+        fetch('/schools_data.json')
+            .then(res => res.json())
+            .then(data => setSchools(data))
+            .catch(err => console.error('Error fetching schools:', err));
     }, []);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         if (name === 'nisn' && value.length > 10) return;
+
         setFormData({ ...formData, [name]: value });
+
+        if (name === 'sekolahAsal') {
+            if (value.length > 0) {
+                const filtered = schools.filter(school =>
+                    school.nama.toLowerCase().includes(value.toLowerCase())
+                ).slice(0, 10);
+                setFilteredSchools(filtered);
+                setShowSuggestions(true);
+            } else {
+                setShowSuggestions(false);
+            }
+        }
+    };
+
+    const handleSchoolSelect = (schoolName) => {
+        setFormData({ ...formData, sekolahAsal: schoolName });
+        setShowSuggestions(false);
     };
 
     const handleSubmit = async (e) => {
@@ -49,7 +75,7 @@ const Register = () => {
             {/* Left Side - Image (Fixed) */}
             <div style={{
                 flex: '1.2',
-                backgroundImage: `url(${loginBg})`,
+                backgroundImage: `url(${registerBg})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 position: 'fixed',
@@ -66,7 +92,7 @@ const Register = () => {
                 <div style={{
                     position: 'absolute',
                     inset: 0,
-                    background: 'linear-gradient(to right, rgba(15, 23, 42, 0.4), var(--bg))'
+                    background: 'linear-gradient(to right, rgba(15, 23, 42, 0.7) 0%, rgba(15, 23, 42, 0.85) 100%)'
                 }} />
 
                 <div style={{ position: 'relative', zIndex: 10, color: 'white', maxWidth: '90%' }}>
@@ -138,9 +164,53 @@ const Register = () => {
                                 <textarea name="alamat" rows="2" value={formData.alamat} onChange={handleChange} required placeholder="Jalan, RT/RW, Kecamatan, Kota/Kabupaten" style={{ padding: '0.8rem', resize: 'vertical' }} />
                             </div>
 
-                            <div className="input-group">
+                            <div className="input-group" style={{ position: 'relative' }}>
                                 <label>Sekolah Asal</label>
-                                <input name="sekolahAsal" type="text" value={formData.sekolahAsal} onChange={handleChange} required placeholder="Nama SMP/Mts Asal" style={{ padding: '0.8rem' }} />
+                                <input
+                                    name="sekolahAsal"
+                                    type="text"
+                                    value={formData.sekolahAsal}
+                                    onChange={handleChange}
+                                    onFocus={() => { if (formData.sekolahAsal) setShowSuggestions(true); }}
+                                    onBlur={() => setTimeout(() => setShowSuggestions(false), 200)} // Delay to allow click
+                                    required
+                                    placeholder="Ketik Nama SMP/Mts Asal"
+                                    autoComplete="off"
+                                    style={{ padding: '0.8rem' }}
+                                />
+                                {showSuggestions && filteredSchools.length > 0 && (
+                                    <div style={{
+                                        position: 'absolute',
+                                        top: '100%',
+                                        left: 0,
+                                        width: '100%',
+                                        background: 'white',
+                                        border: '1px solid #cbd5e1',
+                                        borderRadius: '0.5rem',
+                                        maxHeight: '200px',
+                                        overflowY: 'auto',
+                                        zIndex: 50,
+                                        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
+                                    }}>
+                                        {filteredSchools.map((school, idx) => (
+                                            <div
+                                                key={idx}
+                                                onClick={() => handleSchoolSelect(school.nama)}
+                                                style={{
+                                                    padding: '0.75rem 1rem',
+                                                    cursor: 'pointer',
+                                                    borderBottom: idx !== filteredSchools.length - 1 ? '1px solid #f1f5f9' : 'none',
+                                                    color: '#334155',
+                                                    transition: 'background 0.2s'
+                                                }}
+                                                onMouseEnter={(e) => e.target.style.background = '#f1f5f9'}
+                                                onMouseLeave={(e) => e.target.style.background = 'white'}
+                                            >
+                                                {school.nama}
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
                             <div className="input-group">
                                 <label>Pilihan Jurusan</label>
