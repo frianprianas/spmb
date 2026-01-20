@@ -1,0 +1,3554 @@
+[
+    {
+        "nama": "SMP NEGERI 1 BANDUNG",
+        "npsn": "20219324",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 2 BANDUNG",
+        "npsn": "20219325",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 3 BANDUNG",
+        "npsn": "20219326",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 4 BANDUNG",
+        "npsn": "20219327",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 5 BANDUNG",
+        "npsn": "20219328",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 7 BANDUNG",
+        "npsn": "20219335",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 13 BANDUNG",
+        "npsn": "20219375",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 1 SUMEDANG",
+        "npsn": "20234057",
+        "kab_kota": "Kab. Sumedang",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 2 SUMEDANG",
+        "npsn": "20234058",
+        "kab_kota": "Kab. Sumedang",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 3 SUMEDANG",
+        "npsn": "20234059",
+        "kab_kota": "Kab. Sumedang",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 4 SUMEDANG",
+        "npsn": "20234060",
+        "kab_kota": "Kab. Sumedang",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 1 JATINANGOR",
+        "npsn": "20234023",
+        "kab_kota": "Kab. Sumedang",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 2 JATINANGOR",
+        "npsn": "20252358",
+        "kab_kota": "Kab. Sumedang",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 1 TANJUNGSARI",
+        "npsn": "20234080",
+        "kab_kota": "Kab. Sumedang",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 1 CILEUNYI",
+        "npsn": "20206128",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 2 CILEUNYI",
+        "npsn": "20228026",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 1 RANCAEKEK",
+        "npsn": "20206214",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 1 MARGAHAYU",
+        "npsn": "20206179",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 1 SOREANG",
+        "npsn": "20206233",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "MTS NEGERI 1 KOTA BANDUNG",
+        "npsn": "20277332",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "MTS NEGERI 2 KOTA BANDUNG",
+        "npsn": "20277333",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "MTS AL INAYAH",
+        "npsn": "20277631",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS AL GHIFARI",
+        "npsn": "20245030",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MUHAMMADIYAH 8 BANDUNG",
+        "npsn": "20219502",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP TELKOM BANDUNG",
+        "npsn": "69896791",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "MTSN 1 SUMEDANG",
+        "npsn": "20279611",
+        "kab_kota": "Kab. Sumedang",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP IT INSAN SEJAHTERA",
+        "npsn": "69762963",
+        "kab_kota": "Kab. Sumedang",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AL MA'SOEM",
+        "npsn": "20234120",
+        "kab_kota": "Kab. Sumedang",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "MTS AL MA'SOEM",
+        "npsn": "20279567",
+        "kab_kota": "Kab. Sumedang",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP GRAVITASI",
+        "npsn": "336668",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 2 SOREANG",
+        "npsn": "22204",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 2 KUTAWARINGIN",
+        "npsn": "22203",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP YPPKP SOREANG",
+        "npsn": "22202",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS AL IRFAN",
+        "npsn": "22201",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BINA CASTRENA INSANI",
+        "npsn": "22200",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AL-TAMIMI",
+        "npsn": "22199",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AL BURDAH",
+        "npsn": "22198",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 1 CANGKUANG",
+        "npsn": "22104",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PLUS AL MUHSININ",
+        "npsn": "22103",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI CANGKUANG",
+        "npsn": "22102",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PASUNDAN 1 CANGKUANG",
+        "npsn": "22101",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BHAKTI MULYA BANJARAN",
+        "npsn": "22100",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 2 SOLOKANJERUK",
+        "npsn": "22028",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 SOLOKANJERUK",
+        "npsn": "22027",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP YPPSD SOLOKANJERUK",
+        "npsn": "22026",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI 450 SOLOKANJERUK",
+        "npsn": "22025",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP GPI SOLOKANJERUK",
+        "npsn": "22024",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP DIENUL ISLAM",
+        "npsn": "22023",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP DARUSSALAM",
+        "npsn": "22022",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BHAKTI PUTRA",
+        "npsn": "22021",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 1 NAGREG",
+        "npsn": "21946",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP YP 17 NAGREG",
+        "npsn": "21945",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP TRIBHAKTI",
+        "npsn": "21944",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI GANJAR SABAR",
+        "npsn": "21943",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MATHLA UL ANWAR NAGREG",
+        "npsn": "21942",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 3 RANCABALI",
+        "npsn": "21883",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 2 RANCABALI",
+        "npsn": "21882",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 RANCABALI",
+        "npsn": "21881",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP SWADAYA KARYA CIBUNI",
+        "npsn": "21880",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PERKAPPEN SINUMBRA",
+        "npsn": "21879",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP ASSALAAM",
+        "npsn": "21878",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN SATAP CIBANTENG",
+        "npsn": "21831",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 3 CIMENYAN",
+        "npsn": "21830",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 2 CIMENYAN",
+        "npsn": "21829",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 CIMENYAN",
+        "npsn": "21828",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PLUS BABUSSALAM",
+        "npsn": "21827",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP Plus Al-Ashr Al-Madani",
+        "npsn": "21826",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS AL KAUTSAR",
+        "npsn": "21825",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI MEKAR MANIK",
+        "npsn": "21824",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI DAGO PAKAR",
+        "npsn": "21823",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NUR KAUTSAR",
+        "npsn": "21822",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP IT AL-GHOFAR",
+        "npsn": "21821",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP IBNU SINA",
+        "npsn": "21820",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP CENDEKIA LEADERSHIP SCHOOL",
+        "npsn": "21819",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BUSTANUL ULUM",
+        "npsn": "21818",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AL MUKARRAMAH CIMENYAN",
+        "npsn": "21816",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 2 CILENGKRANG",
+        "npsn": "21740",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 CILENGKRANG",
+        "npsn": "21739",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP TERPADU NURUZZAMAN",
+        "npsn": "21738",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KARANGARUM",
+        "npsn": "21737",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN SATU ATAP CIKONENG",
+        "npsn": "21702",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 3 CILEUNYI",
+        "npsn": "21701",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 2 CILEUNYI",
+        "npsn": "21700",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 CILEUNYI",
+        "npsn": "21699",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP SEKAR PERTIWI",
+        "npsn": "21698",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS IBNU RUSYD",
+        "npsn": "21697",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS BANI HATIM",
+        "npsn": "21696",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS BANDUNG TIMUR",
+        "npsn": "21695",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS AR-RAHMAT",
+        "npsn": "21694",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI 408 CILEUNYI",
+        "npsn": "21693",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MUSLIMIN PANYAWUNGAN",
+        "npsn": "21692",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MEKAR GALIH",
+        "npsn": "21691",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MEKAR ARUM",
+        "npsn": "21690",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP LAB PERCONTOHAN UPI",
+        "npsn": "21689",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KARYA BUDI",
+        "npsn": "21688",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP IT INSAN TELADAN",
+        "npsn": "21687",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP IT IBNU ABBAS",
+        "npsn": "21686",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BAKTI NUSANTARA 666",
+        "npsn": "21685",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AL AMANAH",
+        "npsn": "21684",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 2 BOJONGSOANG",
+        "npsn": "21538",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 BOJONGSOANG",
+        "npsn": "21537",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PUTERA BANGSA",
+        "npsn": "21536",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS AL-AITAAM",
+        "npsn": "21535",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI BUAHBATU",
+        "npsn": "21534",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP INSPIRATIF",
+        "npsn": "21533",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP DAYA WARGA BAKTI BOJONGSOANG",
+        "npsn": "21532",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BINA TARUNA",
+        "npsn": "21531",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 2 DAYEUHKOLOT",
+        "npsn": "21443",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 DAYEUHKOLOT",
+        "npsn": "21442",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP YPN DAYEUHKOLOT",
+        "npsn": "21441",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP YPI PASAWAHAN",
+        "npsn": "21440",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS AL-AMANAH",
+        "npsn": "21438",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PERTIWI",
+        "npsn": "21437",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NURUL HIDAYAH",
+        "npsn": "21436",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KRISTEN KALAM KUDUS",
+        "npsn": "21435",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP GARUDA DAYEUHKOLOT",
+        "npsn": "21434",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 3 MARGAHAYU",
+        "npsn": "21334",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 2 MARGAHAYU",
+        "npsn": "21333",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 MARGAHAYU",
+        "npsn": "21332",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPK 3 BINA BAKTI",
+        "npsn": "21331",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MUHAMMADIYAH 4 MARGAHAYU",
+        "npsn": "21330",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MATHLAUL ANWAR MARGAHAYU",
+        "npsn": "21329",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MARHAS",
+        "npsn": "21328",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KP MARGAHAYU",
+        "npsn": "21327",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP IT ANNI MAH",
+        "npsn": "21326",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP ANGKASA LANUD SULAIMAN",
+        "npsn": "21325",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 2 MARGAASIH",
+        "npsn": "21220",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 MARGAASIH",
+        "npsn": "21219",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP YPAI RAHAYU",
+        "npsn": "21218",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP TALENTA",
+        "npsn": "21217",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS YPI AL-ISLAMIYYAH",
+        "npsn": "21216",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI 175 MARGAASIH",
+        "npsn": "21215",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MEKARRAHAYU",
+        "npsn": "21214",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AL MASUDIYAH",
+        "npsn": "21213",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN SATU ATAP BABAKAN",
+        "npsn": "21121",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 3 SOREANG",
+        "npsn": "21120",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 SOREANG",
+        "npsn": "21119",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP YAMISA SOREANG",
+        "npsn": "21118",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP SOREANG PUTERA",
+        "npsn": "21117",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP Plus Sirojul Huda",
+        "npsn": "21116",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS AL-IHSAN SOREANG",
+        "npsn": "21115",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP INOVATIF AL IBDA",
+        "npsn": "21114",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 2 KATAPANG",
+        "npsn": "21011",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 KATAPANG",
+        "npsn": "21010",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PLUS AL-MUHAJIRIN",
+        "npsn": "21009",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PENIDA",
+        "npsn": "21008",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PASUNDAN KATAPANG",
+        "npsn": "21007",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KARYA BHAKTI",
+        "npsn": "21006",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 2 PAMEUNGPEUK",
+        "npsn": "20912",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 PAMEUNGPEUK",
+        "npsn": "20911",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP TARUNA BOJONGKUNCI PAMEUNGPEUK",
+        "npsn": "20910",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI PAMEUNGPEUK",
+        "npsn": "20909",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BINA MULYA",
+        "npsn": "20908",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BINA BANGSA INDONESIA",
+        "npsn": "20907",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AMS PAMEUNGPEUK",
+        "npsn": "20906",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 2 BANJARAN",
+        "npsn": "20824",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 BANJARAN",
+        "npsn": "20823",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP YUMIK BANJARAN",
+        "npsn": "20822",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP YASTRIB",
+        "npsn": "20821",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP YAHAS BANJARAN",
+        "npsn": "20820",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP UMI KULSUM BANJARAN",
+        "npsn": "20819",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP TERPADU AL FALAH",
+        "npsn": "20818",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS AL-MUSTHAFA",
+        "npsn": "20817",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI CIBARIBIS BANJARAN",
+        "npsn": "20816",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI BANJARAN",
+        "npsn": "20815",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PEMUDA BANJARAN",
+        "npsn": "20814",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PASUNDAN 1 BANJARAN",
+        "npsn": "20813",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP DUA MEI BANJARAN",
+        "npsn": "20812",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BUDIMULYA",
+        "npsn": "20811",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 2 ARJASARI",
+        "npsn": "20696",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 ARJASARI",
+        "npsn": "20695",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PGRI ARJASARI",
+        "npsn": "20694",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MUHAMMADIYAH 8 ARJASARI",
+        "npsn": "20693",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KP WARGALUYU",
+        "npsn": "20692",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KP BAROS",
+        "npsn": "20691",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP HANDAYANI 2 PAMEUNGPEUK",
+        "npsn": "20690",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP HANDAYANI 1",
+        "npsn": "20689",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BINA NEGARA 1",
+        "npsn": "20688",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 3 BALEENDAH",
+        "npsn": "20558",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 2 BALEENDAH",
+        "npsn": "20557",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 BALEENDAH",
+        "npsn": "20556",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP YPPI BALEENDAH",
+        "npsn": "20555",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP STMC 4245 BALEENDAH",
+        "npsn": "20554",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP RANCAMANYAR",
+        "npsn": "20553",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS AL ISTIQOMAH",
+        "npsn": "20552",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI BALEENDAH",
+        "npsn": "20551",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MUTIARA SANDI",
+        "npsn": "20550",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MUHAMMADIYAH 6 BALEENDAH",
+        "npsn": "20549",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KP 2 BALEENDAH",
+        "npsn": "20548",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KP 1 BALEENDAH",
+        "npsn": "20547",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP IT FITHRAH INSANI",
+        "npsn": "20546",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP HARAPAN BANGSA",
+        "npsn": "20545",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP GEMAH BALEENDAH",
+        "npsn": "20544",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BPPI BALEENDAH",
+        "npsn": "20543",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BINA NEGARA 2",
+        "npsn": "20542",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AL QONA AH",
+        "npsn": "20541",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 3 CIPARAY",
+        "npsn": "20355",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 2 CIPARAY",
+        "npsn": "20354",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 CIPARAY",
+        "npsn": "20353",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP YPI CIPARAY",
+        "npsn": "20352",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP YAPI AL HUSAENI",
+        "npsn": "20351",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP TUNAS PEMBANGUNAN",
+        "npsn": "20350",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP TUNAS BARU CIPARAY",
+        "npsn": "20349",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP TERPADU BAITURRAHMAN",
+        "npsn": "20348",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS ROBITOH",
+        "npsn": "20347",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI 2 CIPARAY",
+        "npsn": "20346",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI 1 CIPARAY",
+        "npsn": "20345",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MUHAMMADIYAH 7 SUMBERSARI",
+        "npsn": "20344",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MUHAMMADIYAH 2 CIPARAY",
+        "npsn": "20343",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MIKA BAKTI",
+        "npsn": "20342",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KP CIPARAY",
+        "npsn": "20341",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KP BABAKAN",
+        "npsn": "20340",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP ITIKURIH HIBARNA",
+        "npsn": "20339",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP IT THARIQ BIN ZIYAD",
+        "npsn": "20338",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP IT BAITUS SHOFAA",
+        "npsn": "20337",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP IT AL-MADANI PRIMA",
+        "npsn": "20336",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AL HIDAYAH SUTAM",
+        "npsn": "20335",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AL FAJAR CIPARAY",
+        "npsn": "20334",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AL BADAR CIPARAY",
+        "npsn": "20333",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 1 MAJALAYA",
+        "npsn": "20140",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP YPN MAJALAYA",
+        "npsn": "20139",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI 427 MAJALAYA",
+        "npsn": "20138",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PASUNDAN MAJALAYA",
+        "npsn": "20137",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NUSANTARA",
+        "npsn": "20136",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MUHAMMADIYAH 1",
+        "npsn": "20135",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MAJALAYA PUTRA",
+        "npsn": "20134",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KP 2 MAJALAYA",
+        "npsn": "20133",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KP 1 MAJALAYA",
+        "npsn": "20132",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP DARUL HIKAM",
+        "npsn": "20131",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP ASSALAM",
+        "npsn": "20130",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AL-GHOZALI",
+        "npsn": "20129",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP 10 NOPEMBER 1945",
+        "npsn": "20128",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 4 RANCAEKEK",
+        "npsn": "19971",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 3 RANCAEKEK",
+        "npsn": "19970",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 2 RANCAEKEK",
+        "npsn": "19969",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 RANCAEKEK",
+        "npsn": "19968",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP YPS II RANCAEKEK",
+        "npsn": "19967",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP YMB RANCAEKEK",
+        "npsn": "19966",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP TERPADU HIDAYATUL FALAH",
+        "npsn": "19965",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP TAMANSISWA RANCAEKEK",
+        "npsn": "19964",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS MUTHAHARI",
+        "npsn": "19963",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI RANCAEKEK",
+        "npsn": "19962",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI HAURPUGUR",
+        "npsn": "19961",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PASUNDAN RANCAEKEK",
+        "npsn": "19960",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP LUGINA",
+        "npsn": "19959",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP IT QORDOVA",
+        "npsn": "19958",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP INSAN UNGGUL",
+        "npsn": "19957",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BPI RANCAEKEK",
+        "npsn": "19956",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AISYIYAH RANCAEKEK",
+        "npsn": "19955",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP ADHI KARYA",
+        "npsn": "19954",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 2 CICALENGKA",
+        "npsn": "19793",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 CICALENGKA",
+        "npsn": "19792",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP YADIKA 1 CICALENGKA",
+        "npsn": "19791",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI CICALENGKA",
+        "npsn": "19790",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MA ARIF CICALENGKA",
+        "npsn": "19789",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KP CICALENGKA",
+        "npsn": "19788",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP IT NURUL WASILAH",
+        "npsn": "19787",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP FK. BINA MUDA",
+        "npsn": "19786",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AL MUTTAQIN",
+        "npsn": "19785",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 3 CIKANCUNG",
+        "npsn": "19671",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 2 CIKANCUNG",
+        "npsn": "19670",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 CIKANCUNG",
+        "npsn": "19669",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PGRI 330 CIKANCUNG",
+        "npsn": "19668",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MANDALASARI",
+        "npsn": "19667",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP HEGARMANAH CIKANCUNG",
+        "npsn": "19666",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BINA HARAPAN BANGSA",
+        "npsn": "19665",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 3 PASEH",
+        "npsn": "19590",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 2 PASEH",
+        "npsn": "19589",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 PASEH",
+        "npsn": "19588",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP YADIKA 2 PASEH",
+        "npsn": "19587",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP TERPADU AL MUMIN PASEH",
+        "npsn": "19586",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP SUKAMANAH PASEH",
+        "npsn": "19585",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS KP 2 PASEH",
+        "npsn": "19584",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS DHARMA AGUNG",
+        "npsn": "19583",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI 441 PASEH",
+        "npsn": "19582",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MEKARPAWITAN",
+        "npsn": "19581",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KP 1 PASEH",
+        "npsn": "19580",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP IBNU HANAFIYAH",
+        "npsn": "19579",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP HAYATAN THAYYIBAH",
+        "npsn": "19578",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 3 IBUN",
+        "npsn": "19450",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 2 IBUN",
+        "npsn": "19449",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 IBUN",
+        "npsn": "19448",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP TERPADU BANDUNG",
+        "npsn": "19447",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP SANTIKA PASEH",
+        "npsn": "19446",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI IBUN",
+        "npsn": "19445",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KP IBUN",
+        "npsn": "19444",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP Karya Pembangunan Cieuri",
+        "npsn": "19443",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP ALIMIN IBUN",
+        "npsn": "19442",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 3 PACET",
+        "npsn": "19346",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 2 PACET",
+        "npsn": "19345",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 PACET",
+        "npsn": "19344",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PLUS TUNAS HARAPAN",
+        "npsn": "19343",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS NUR MUHAMMAD",
+        "npsn": "19342",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS MULTAZAM",
+        "npsn": "19341",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS AS-SIROJI",
+        "npsn": "19340",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI PACET",
+        "npsn": "19339",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PANTI PSM PACET",
+        "npsn": "19338",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MANGGALA",
+        "npsn": "19337",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP IT NURUSY-SYIFA",
+        "npsn": "19336",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP ISLAM PACET",
+        "npsn": "19335",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AL-IKHLAS",
+        "npsn": "19334",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AL-AMIN",
+        "npsn": "19333",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN SATU ATAP NEGLA",
+        "npsn": "19182",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 2 KERTASARI",
+        "npsn": "19181",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 KERTASARI",
+        "npsn": "19180",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PLUS DAARUL HASAN",
+        "npsn": "19179",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MUHAMMADIYAH 3 KERTASARI",
+        "npsn": "19178",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 4 PANGALENGAN",
+        "npsn": "19095",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 3 PANGALENGAN",
+        "npsn": "19094",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 2 PANGALENGAN",
+        "npsn": "19093",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 PANGALENGAN",
+        "npsn": "19092",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP SEJAHTERA YKS",
+        "npsn": "19091",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS AL-BASYIIRIYYAH",
+        "npsn": "19090",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PASUNDAN PANGALENGAN",
+        "npsn": "19089",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP IT DANUL FALAH",
+        "npsn": "19088",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BHAKTI PEMUDA",
+        "npsn": "19087",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 1 CIMAUNG",
+        "npsn": "18964",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP TARUNA CAMPAKA MULYA",
+        "npsn": "18963",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS AL-KAUTSAR",
+        "npsn": "18962",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI 1 PANGALENGAN",
+        "npsn": "18961",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PASUNDAN 1 CIMAUNG",
+        "npsn": "18960",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MAWADDI",
+        "npsn": "18959",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP DARMAYANTI",
+        "npsn": "18958",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BANJAR ASRI",
+        "npsn": "18957",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 2 PASIRJAMBU",
+        "npsn": "18865",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 PASIRJAMBU",
+        "npsn": "18864",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PIB PASIRJAMBU",
+        "npsn": "18863",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI PASIRJAMBU",
+        "npsn": "18862",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PERKAPEN RANCABALI",
+        "npsn": "18861",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MUARA MADANI",
+        "npsn": "18860",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KP PASIRJAMBU",
+        "npsn": "18859",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP IT  BAITURRIDO",
+        "npsn": "18858",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMPN 3 CIWIDEY",
+        "npsn": "18726",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 2 CIWIDEY",
+        "npsn": "18725",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMPN 1 CIWIDEY",
+        "npsn": "18724",
+        "kab_kota": "Kab. Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PLUS DARUL AMANAH CIWIDEY",
+        "npsn": "18723",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AL-WAFA CIWIDEY",
+        "npsn": "18722",
+        "kab_kota": "Kab. Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BINA DHARMA 3",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP DAARUT TAUHIID BOARDING SCHOOL",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KARTIKA XIX-2",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 12",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 15",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP TEMASEK INDEPENDENT SCHOOL",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP LABORATORIUM-PERCONTOHAN UPI",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MIFTAHUL IMAN",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 29",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PASUNDAN 12",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI 5",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 70",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PASUNDAN 10",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BUNGA BANGSA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KRISTEN HIDUP BARU",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 52",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PGRI 2",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AL HUSAINIYYAH",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KUNTUM CEMERLANG",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BPPI BOJONG",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP CITRA CEMARA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 55",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PLUS SINDANG RESMI",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BPK PENABUR HOLIS",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PASUNDAN 7",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP YPKKP",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 57",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 36",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 39",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP MUTIARA 3",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 21",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 75",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 73",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PASUNDAN 9",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 33",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PELITA FAJAR",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP SWADAYA 1",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP SWADAYA 2",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PASUNDAN 5",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP JENDERAL SUDIRMAN",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 24",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PAHLAWAN TOHA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 38",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP YUDHISTIRA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP YP SEJATI",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS AL-GOZALI",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BINTANG MULIA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP HARAPAN KASIH",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KRISTEN BPK PENABUR SINGGASANA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MUHAMMADIYAH 7",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP GRACIA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KRISTEN GAMALIEL",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PELITA BANGSA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP YAMI",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 25",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP GANESHA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KRISTEN REHOBOTH",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PASUNDAN 1",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PASUNDAN 2",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP DEWI SARTIKA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 43",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 11",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 60",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NUGRAHA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP SEBELAS MARET",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 10",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 3",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP YOS SUDARSO",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MADYA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 34",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP SANTO ALOYSIUS 2",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AL KENZIE",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI 7",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP ISLAM AL WASLIYAH",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP SETIA BHAKTI",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 18",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 42",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP TULUS KARTIKA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 51",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 48",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 65",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 46",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP AL ISLAM",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS INTAN AL-SALI",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BANDUNG INSTITUT",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 71",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP MUSLIMIN 5",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 50",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 8",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PGRI 10",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AL-KHULAFA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP DAARUL QURAN",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP GEMA PANCASILA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP GUPPI",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KARYA PEMBANGUNAN 10",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP TRIYASA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS BAITURRAHMAN",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP GANTRA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BINAHARAPAN",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BINTANG MADANI",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP TAHFIZHUL QURAN AMANAH UMMAH",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP ISLAM TERPADU LUQMANUL HAKIM",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP SURYA KENCANA BHAKTI",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BAHTERA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MUHAMMADIYAH 9",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP ISLAM CENDEKIA MUDA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP LANGLANGBUANA 2",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MUTIARA BUNDA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 17",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP BINA DHARMA 2",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KARYA NUSANTARA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 37",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NUSANTARA RAYA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP SANTO YUSUP",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP IGNATIUS SLAMET RIYADI",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP VIJAYA KUSUMA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AR RAFI DRAJAT",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 30",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 31",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP AISYIYAH BOARDING SCHOOL",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGRI 3",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 62",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 20",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 4",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PGRI 1",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP YPU",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PASUNDAN 6",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP SANTA ANGELA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP SANTO YUSUP 2",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP ADVENT NARIPAN",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BPP",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP WYATA DHARMA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP EDU GLOBAL",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KARTIKA XIX-1",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 2",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 5",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP ADVENT CIMINDI",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MUTIARA 4",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 67",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PELITA NUSANTARA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP LPPN",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 23",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 32",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 41",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP RAJAWALI",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP WARINGIN",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KIANSANTANG",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KRISTEN 5 BPK PENABUR",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MUHAMMADIYAH 4",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MUTIARA 1",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PAJAJARAN 1",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP YWKA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KRISTEN BALA KESELAMATAN",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 6",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PASUNDAN 4",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KRISTEN 1 BINA BAKTI",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KRISTEN 2 BINA BAKTI",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KRISTEN BPPK",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 1",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 9",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP ANGKASA LANUD HUSEIN SASTRANEGARA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 68",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP KRISTEN TRIMULIA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP YAQIN",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP YAYASAN BUDI BAKTI",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KRISTEN 1 BPK PENABUR",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PANDU",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP YPI",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KRISTEN PAULUS",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP HIKMAH TELADAN",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MUHAMMADIYAH 2",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 47",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PGRI 4",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 14",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP SANTA MARIA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP SANTA URSULA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BPK PENABUR BANDA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KRISTEN YAHYA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 44",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 7",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP SANTO ALOYSIUS",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP TARUNA BAKTI",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KRISTEN BAPTIS",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 40",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 27",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PGRI 11",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MUHAMMADIYAH 3",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 61",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP LANGLANGBUANA 1",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 22",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PELITA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP YAYASAN ATIKAN SUNDA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PGII 2",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP SUMATERA 40",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BINA SARANA CENDEKIA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP ISLAM TERPADU AL-IRSYAD",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 16",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PASUNDAN 8",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP ISTIQAMAH",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP ADVENT II BANDUNG",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PASUNDAN 3",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AL FALAH",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP ALAM BANDUNG",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 35",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 69",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PGII 1",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 63",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP KEMAH INDONESIA 4",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NASIONAL",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 19",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PGRI 6",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP SALMAN AL FARISI",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AL-IHSAN CIMENCRANG",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP EL FITRA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 66",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 54",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 72",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP AL BIRUNI CERDAS MULIA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP AL HASAN",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP JUARA BANDUNG",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP PLUS TEMARA ILMU",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP GUNA DHARMA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP INTELIGENSIA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MUHAMMADIYAH 10",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 56",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 58",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PGRI 9",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP THARIIQUL JANNAH",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 59",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP AL HADI BANDUNG",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 53",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP TUNAS UNGGUL",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MUHAMMADIYAH 5",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MUHAMMADIYAH 8",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 45",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 49",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP PGRI 8",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BPI 1",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP BUDI ISTRI",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP ALFA CENTAURI",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP ISLAM AL-AZHAR 36",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KARTIKA X-1",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MAARIF",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KEMALA BHAYANGKARI",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP KRISTEN 4 BPK PENABUR",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP TAMANSISWA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP MUSLIMIN 3",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 13",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 28",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP MUHAMMADIYAH 6",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 74",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP SEMI PALAR",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP INDONESIA RAYA",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "SWASTA"
+    },
+    {
+        "nama": "SMP NEGERI 26",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    },
+    {
+        "nama": "SMP NEGERI 64",
+        "npsn": "-",
+        "kab_kota": "Kota Bandung",
+        "status": "NEGERI"
+    }
+]
