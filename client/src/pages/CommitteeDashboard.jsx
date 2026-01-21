@@ -666,37 +666,50 @@ const CommitteeDashboard = () => {
                     </div>
                 ) : (
                     <div className="glass" style={{ padding: '2rem', overflowX: 'auto' }}>
-                        <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '800px' }}>
+                        <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '2000px', fontSize: '0.9rem' }}>
                             <thead>
-                                <tr style={{ color: 'var(--text-muted)', borderBottom: '1px solid var(--border)' }}>
-                                    <th style={{ textAlign: 'left', padding: '1rem' }}>No</th>
-                                    <th style={{ textAlign: 'left', padding: '1rem' }}>Nama Lengkap & JK</th>
-                                    <th style={{ textAlign: 'left', padding: '1rem' }}>Jurusan</th>
-                                    <th style={{ textAlign: 'left', padding: '1rem' }}>Data Sekolah & NISN</th>
-                                    <th style={{ textAlign: 'left', padding: '1rem' }}>Kontak Ortu</th>
-                                    <th style={{ textAlign: 'left', padding: '1rem' }}>Pembayaran</th>
+                                <tr style={{ background: '#f8fafc', borderBottom: '2px solid var(--border)', textAlign: 'left' }}>
+                                    <th style={{ padding: '1rem', borderRight: '1px solid var(--border)' }}>No</th>
+                                    <th style={{ padding: '1rem', borderRight: '1px solid var(--border)' }}>Nama Lengkap</th>
+                                    <th style={{ padding: '1rem', borderRight: '1px solid var(--border)' }}>JK</th>
+                                    <th style={{ padding: '1rem', borderRight: '1px solid var(--border)' }}>NISN</th>
+                                    <th style={{ padding: '1rem', borderRight: '1px solid var(--border)' }}>NIK</th>
+                                    <th style={{ padding: '1rem', borderRight: '1px solid var(--border)' }}>No KK</th>
+                                    <th style={{ padding: '1rem', borderRight: '1px solid var(--border)' }}>TTL</th>
+                                    <th style={{ padding: '1rem', borderRight: '1px solid var(--border)' }}>Agama</th>
+                                    <th style={{ padding: '1rem', borderRight: '1px solid var(--border)' }}>Alamat</th>
+                                    <th style={{ padding: '1rem', borderRight: '1px solid var(--border)' }}>Asal Sekolah</th>
+                                    <th style={{ padding: '1rem', borderRight: '1px solid var(--border)' }}>Jurusan</th>
+                                    <th style={{ padding: '1rem', borderRight: '1px solid var(--border)' }}>WA Siswa</th>
+                                    <th style={{ padding: '1rem', borderRight: '1px solid var(--border)' }}>Nama Ayah</th>
+                                    <th style={{ padding: '1rem', borderRight: '1px solid var(--border)' }}>WA Ayah</th>
+                                    <th style={{ padding: '1rem', borderRight: '1px solid var(--border)' }}>Nama Ibu</th>
+                                    <th style={{ padding: '1rem', borderRight: '1px solid var(--border)' }}>WA Ibu</th>
+                                    <th style={{ padding: '1rem' }}>Pembayaran</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {students.map((s, index) => (
-                                    <tr key={index} style={{ borderBottom: '1px solid var(--border)' }}>
-                                        <td style={{ padding: '1rem' }}>{index + 1}</td>
-                                        <td style={{ padding: '1rem' }}>
-                                            <div style={{ fontWeight: '600' }}>{s.User?.name}</div>
-                                            <span style={{ fontSize: '0.8rem', background: '#eee', padding: '0.2rem 0.5rem', borderRadius: '4px' }}>
-                                                {s.fullData?.jenisKelamin || '-'}
-                                            </span>
+                                    <tr key={index} style={{ borderBottom: '1px solid var(--border)', background: index % 2 === 0 ? 'white' : '#fcfcfc' }}>
+                                        <td style={{ padding: '0.8rem', borderRight: '1px solid #eee' }}>{index + 1}</td>
+                                        <td style={{ padding: '0.8rem', borderRight: '1px solid #eee', fontWeight: 'bold' }}>{s.User?.name}</td>
+                                        <td style={{ padding: '0.8rem', borderRight: '1px solid #eee' }}>{s.fullData?.jenisKelamin}</td>
+                                        <td style={{ padding: '0.8rem', borderRight: '1px solid #eee' }}>{s.fullData?.nisn}</td>
+                                        <td style={{ padding: '0.8rem', borderRight: '1px solid #eee' }}>{s.fullData?.nik}</td>
+                                        <td style={{ padding: '0.8rem', borderRight: '1px solid #eee' }}>{s.fullData?.noKK}</td>
+                                        <td style={{ padding: '0.8rem', borderRight: '1px solid #eee' }}>{s.fullData?.tempatLahir}, {s.fullData?.tglLahir}</td>
+                                        <td style={{ padding: '0.8rem', borderRight: '1px solid #eee' }}>{s.fullData?.agama}</td>
+                                        <td style={{ padding: '0.8rem', borderRight: '1px solid #eee', maxWidth: '300px', whiteSpace: 'normal' }}>
+                                            {s.fullData?.alamatLengkap}, {s.fullData?.desa}, {s.fullData?.kecamatan}, {s.fullData?.kabupaten}, {s.fullData?.provinsi}
                                         </td>
-                                        <td style={{ padding: '1rem' }}>{s.Department?.name}</td>
-                                        <td style={{ padding: '1rem' }}>
-                                            <div>{s.fullData?.asalSekolah || '-'}</div>
-                                            <small style={{ color: 'var(--text-muted)' }}>NISN: {s.fullData?.nisn || '-'}</small>
-                                        </td>
-                                        <td style={{ padding: '1rem' }}>
-                                            <div style={{ fontSize: '0.9rem' }}>A: {s.fullData?.waAyah || '-'}</div>
-                                            <div style={{ fontSize: '0.9rem' }}>I: {s.fullData?.waIbu || '-'}</div>
-                                        </td>
-                                        <td style={{ padding: '1rem', fontWeight: 'bold', color: '#10b981' }}>
+                                        <td style={{ padding: '0.8rem', borderRight: '1px solid #eee' }}>{s.fullData?.asalSekolah}</td>
+                                        <td style={{ padding: '0.8rem', borderRight: '1px solid #eee' }}>{s.Department?.name}</td>
+                                        <td style={{ padding: '0.8rem', borderRight: '1px solid #eee' }}>{s.User?.wa || s.fullData?.wa}</td>
+                                        <td style={{ padding: '0.8rem', borderRight: '1px solid #eee' }}>{s.fullData?.namaAyah}</td>
+                                        <td style={{ padding: '0.8rem', borderRight: '1px solid #eee' }}>{s.fullData?.waAyah}</td>
+                                        <td style={{ padding: '0.8rem', borderRight: '1px solid #eee' }}>{s.fullData?.namaIbu}</td>
+                                        <td style={{ padding: '0.8rem', borderRight: '1px solid #eee' }}>{s.fullData?.waIbu}</td>
+                                        <td style={{ padding: '0.8rem', fontWeight: 'bold', color: '#10b981' }}>
                                             Rp {parseInt(s.paymentAmount || 0).toLocaleString()}
                                         </td>
                                     </tr>

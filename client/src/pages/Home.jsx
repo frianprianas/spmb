@@ -14,6 +14,7 @@ const Home = () => {
     const [selectedId, setSelectedId] = useState(null);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [showPricing, setShowPricing] = useState(false);
+    const [showMap, setShowMap] = useState(false);
     const heroImages = [schoolImg, hero2, hero3];
 
     useEffect(() => {
@@ -373,53 +374,60 @@ const Home = () => {
                                 <X size={20} />
                             </button>
 
-                            <div style={{ padding: '3rem', background: 'linear-gradient(135deg, var(--primary), var(--secondary))', color: 'white', textAlign: 'center' }}>
-                                <h2 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '0.5rem' }}>Investasi Pendidikan</h2>
-                                <p style={{ opacity: 0.9 }}>Rincian Biaya Penerimaan Murid Baru 2026/2027</p>
+                            <div style={{
+                                padding: '3rem 1.5rem',
+                                background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(/assets/header-investasi.jpg)',
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                                color: 'white',
+                                textAlign: 'center'
+                            }}>
+                                <h2 style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '0.2rem', textShadow: '0 2px 4px rgba(0,0,0,0.5)', letterSpacing: '1px' }}>INVESTASI PENDIDIKAN</h2>
+                                <p style={{ opacity: 0.9, fontSize: '0.9rem' }}>Rincian Biaya Penerimaan Murid Baru 2026/2027</p>
                             </div>
 
-                            <div style={{ padding: '3rem' }}>
-                                <div style={{ marginBottom: '2rem' }}>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem 0', borderBottom: '1px solid #e5e7eb' }}>
-                                        <span style={{ fontWeight: 500, fontSize: '1.1rem' }}>Formulir Pendaftaran</span>
+                            <div style={{ padding: '1.5rem', fontSize: '0.95rem' }}>
+                                <div style={{ marginBottom: '1.5rem' }}>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.4rem 0', borderBottom: '1px solid #f1f5f9' }}>
+                                        <span style={{ fontWeight: 500 }}>Formulir Pendaftaran</span>
                                         <span style={{ fontWeight: 600 }}>Rp 300.000</span>
                                     </div>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem 0', borderBottom: '1px solid #e5e7eb' }}>
-                                        <span style={{ fontWeight: 500, fontSize: '1.1rem' }}>Dana Sumbangan Pendidikan (DSP)</span>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.4rem 0', borderBottom: '1px solid #f1f5f9' }}>
+                                        <span style={{ fontWeight: 500 }}>Dana Sumbangan Pendidikan (DSP)</span>
                                         <span style={{ fontWeight: 600 }}>Rp 3.775.000</span>
                                     </div>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem 0', borderBottom: '1px solid #e5e7eb' }}>
-                                        <span style={{ fontWeight: 500, fontSize: '1.1rem' }}>Paket Seragam Sekolah</span>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.4rem 0', borderBottom: '1px solid #f1f5f9' }}>
+                                        <span style={{ fontWeight: 500 }}>Paket Seragam Sekolah</span>
                                         <span style={{ fontWeight: 600 }}>Rp 800.000</span>
                                     </div>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem 0', borderBottom: '1px solid #e5e7eb' }}>
-                                        <span style={{ fontWeight: 500, fontSize: '1.1rem' }}>IPP / SPP Bulan Pertama</span>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.4rem 0', borderBottom: '1px solid #f1f5f9' }}>
+                                        <span style={{ fontWeight: 500 }}>IPP / SPP Bulan Pertama</span>
                                         <span style={{ fontWeight: 600 }}>Rp 350.000</span>
                                     </div>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem 0', borderBottom: '2px dashed #e5e7eb' }}>
-                                        <span style={{ fontWeight: 500, fontSize: '1.1rem' }}>Kegiatan MPLS / MOPD</span>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.4rem 0', borderBottom: '2px dashed #e5e7eb' }}>
+                                        <span style={{ fontWeight: 500 }}>Kegiatan MPLS / MOPD</span>
                                         <span style={{ fontWeight: 600 }}>Rp 275.000</span>
                                     </div>
                                 </div>
 
                                 <div style={{
                                     background: '#f8fafc',
-                                    padding: '2rem',
+                                    padding: '1.5rem',
                                     borderRadius: '1rem',
                                     display: 'flex',
                                     justifyContent: 'space-between',
                                     alignItems: 'center',
-                                    marginBottom: '2rem'
+                                    marginBottom: '1.5rem'
                                 }}>
                                     <div>
-                                        <h3 style={{ margin: 0, color: 'var(--text-muted)', fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Total Biaya Masuk</h3>
+                                        <h3 style={{ margin: 0, color: 'var(--text-muted)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Total Biaya Masuk</h3>
                                     </div>
-                                    <div style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--primary)' }}>
+                                    <div style={{ fontSize: '2rem', fontWeight: 900, color: 'var(--primary)' }}>
                                         Rp 5.500.000
                                     </div>
                                 </div>
 
-                                <div style={{ borderLeft: '4px solid #f59e0b', paddingLeft: '1.5rem', color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: 1.6 }}>
+                                <div style={{ borderLeft: '4px solid #f59e0b', paddingLeft: '1rem', color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.5 }}>
                                     <strong>Ketentuan Pembayaran:</strong>
                                     <br />
                                     Total biaya SPMB harus sudah lunas paling lambat tanggal <strong>10 Juli 2026</strong>.
@@ -432,10 +440,61 @@ const Home = () => {
 
             {/* Info Section */}
             <section className="glass" style={{ padding: '4rem', marginBottom: '80px', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem', textAlign: 'center' }}>
-                <div>
+                <div
+                    style={{ position: 'relative', cursor: 'pointer' }}
+                    onMouseEnter={() => setShowMap(true)}
+                    onMouseLeave={() => setShowMap(false)}
+                >
                     <MapPin size={32} color="var(--primary)" style={{ marginBottom: '1rem' }} />
                     <h3>Alamat</h3>
                     <p style={{ opacity: 0.7 }}>Jl. Raya Percobaan No. 65 KM 17 Cileunyi, Bandung.</p>
+
+                    <AnimatePresence>
+                        {showMap && (
+                            <motion.div
+                                initial={{ opacity: 0, y: 10, scale: 0.9, x: '-50%' }}
+                                animate={{ opacity: 1, y: 0, scale: 1, x: '-50%' }}
+                                exit={{ opacity: 0, y: 10, scale: 0.9, x: '-50%' }}
+                                transition={{ duration: 0.2 }}
+                                style={{
+                                    position: 'absolute',
+                                    bottom: '100%',
+                                    left: '50%',
+                                    marginBottom: '1.5rem',
+                                    width: '320px',
+                                    height: '240px',
+                                    background: 'white',
+                                    borderRadius: '1rem',
+                                    overflow: 'hidden',
+                                    boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
+                                    zIndex: 50,
+                                    border: '2px solid white'
+                                }}
+                            >
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.675003324075!2d107.7399371477459!3d-6.940883093099282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c31e72e1c9c9%3A0xb3631215b244791a!2sSMK%20Bakti%20Nusantara%20666!5e0!3m2!1sid!2sid!4v1705844440000!5m2!1sid!2sid"
+                                    width="100%"
+                                    height="100%"
+                                    style={{ border: 0 }}
+                                    allowFullScreen=""
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                ></iframe>
+
+                                {/* Little triangle pointer */}
+                                <div style={{
+                                    position: 'absolute',
+                                    bottom: '-8px',
+                                    left: '50%',
+                                    transform: 'translateX(-50%) rotate(45deg)',
+                                    width: '16px',
+                                    height: '16px',
+                                    background: 'white',
+                                    zIndex: -1
+                                }}></div>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
                 </div>
                 <div>
                     <Phone size={32} color="var(--primary)" style={{ marginBottom: '1rem' }} />

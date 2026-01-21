@@ -143,4 +143,71 @@ router.post('/resend-otp', async (req, res) => {
     }
 });
 
+router.post('/forgot-password', async (req, res) => {
+    try {
+        const { email } = req.body;
+        const user = await User.findOne({ where: { email } });
+
+        if (!user) return res.status(404).json({ message: 'Email tidak ditemukan' });
+        if (user.role !== 'siswa') return res.status(403).json({ message: 'Fitur ini hanya untuk calon siswa' });
+
+        const now = new Date();
+        const lastReset = user.lastPasswordReset ? new Date(user.lastPasswordReset) : null;
+
+        // Check if reset was done today
+        if (lastReset &&
+            lastReset.getDate() === now.getDate() &&
+            lastReset.getMonth() === now.getMonth() &&
+            lastReset.getFullYear() === now.getFullYear()) {
+            return res.status(400).json({ message: 'Anda hanya dapat melakukan reset password sekali dalam sehari.' });
+        }
+
+        // Generate temporary password
+        const tempPassword = Math.random().toString(36).slice(-8);
+        const hashedPassword = await bcrypt.hash(tempPassword, 10);
+
+        user.password = hashedPassword;
+        user.lastPasswordReset = now;
+        await user.save();
+
+        // Send WhatsApp
+        const waMessage = `Permintaan Reset Password Sistem SPMB\n\nHalo ${user.name},\nPassword sementara akun anda adalah: ${tempPassword}\n\nSilahkan login menggunakan password ini.`;
+
+        await sendWhatsapp(user.wa, waMessage);
+
+        res.json({ message: 'Password sementara telah dikirim ke WhatsApp anda' });
+
+    } catch (error) {
+        console.error('Forgot Password Error:', error);
+        res.status(500).json({ error: error.message });
+    }
+});
+
+router.post('/change-password', async (req, res) => {
+    try {
+        const token = req.headers.authorization?.split(' ')[1];
+        if (!token) return res.status(401).json({ message: 'No token provided' });
+
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const userId = decoded.id;
+
+        const { oldPassword, newPassword } = req.body;
+        const user = await User.findByPk(userId);
+
+        if (!user) return res.status(404).json({ message: 'User not found' });
+
+        const isMatch = await bcrypt.compare(oldPassword, user.password);
+        if (!isMatch) return res.status(400).json({ message: 'Password lama salah' });
+
+        const hashedPassword = await bcrypt.hash(newPassword, 10);
+        user.password = hashedPassword;
+        await user.save();
+
+        res.json({ message: 'Password berhasil diubah' });
+    } catch (error) {
+        console.error('Change Password Error:', error);
+        res.status(500).json({ error: error.message });
+    }
+});
+
 module.exports = router;

@@ -25,8 +25,15 @@ const FinanceDashboard = () => {
     }, []);
 
     const handleVerify = async (id, status) => {
+        let reason = '';
+        if (status === 'rejected') {
+            reason = prompt('Masukkan alasan penolakan (Wajib):');
+            if (reason === null) return; // Cancelled
+            if (!reason.trim()) return alert('Alasan penolakan harus diisi!');
+        }
+
         try {
-            await axios.post(`http://localhost:5000/api/finance/verify-payment/${id}`, { status });
+            await axios.post(`http://localhost:5000/api/finance/verify-payment/${id}`, { status, reason });
             fetchPayments();
         } catch (err) {
             alert('Gagal verifikasi');

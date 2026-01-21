@@ -7,6 +7,7 @@ const User = require('../models/User');
 const Department = require('../models/Department');
 const { authenticate, authorize } = require('../middlewares/auth');
 const { sendWhatsapp } = require('../utils/whatsapp');
+const { sendAdminNotification } = require('../utils/notification');
 
 const storage = multer.diskStorage({
     destination: 'uploads/',
@@ -86,7 +87,7 @@ router.post('/complete-data', authenticate, authorize(['siswa']), async (req, re
     try {
         const reg = await Registration.findOne({
             where: { userId: req.user.id },
-            include: [User]
+            include: [User, Department]
         });
         if (!reg) return res.status(404).json({ message: 'Registration not found' });
         if (reg.paymentStatus !== 'verified') return res.status(400).json({ message: 'Payment not verified yet' });
@@ -97,14 +98,36 @@ router.post('/complete-data', authenticate, authorize(['siswa']), async (req, re
         await reg.save();
 
         // Notify Admin
-        const admins = await User.findAll({ where: { role: 'admin' } });
-        for (const admin of admins) {
-            if (admin.wa) {
-                await sendWhatsapp(admin.wa, `Notifikasi Data Lengkap: Calon siswa ${reg.User.name} telah melengkapi formulir pendaftaran. Silakan cek dashboard admin.`);
-            }
-        }
+        await sendAdminNotification(reg.User.name, reg.Department ? reg.Department.name : '-');
 
         res.json(reg);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+router.get('/messages', authenticate, authorize(['siswa']), async (req, res) => {
+    try {
+        const Message = require('../models/Message');
+        const messages = await Message.findAll({
+            where: { userId: req.user.id },
+            order: [['createdAt', 'DESC']]
+        });
+        res.json(messages);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+router.post('/messages/:id/read', authenticate, authorize(['siswa']), async (req, res) => {
+    try {
+        const Message = require('../models/Message');
+        const msg = await Message.findOne({ where: { id: req.params.id, userId: req.user.id } });
+        if (msg) {
+            msg.isRead = true;
+            await msg.save();
+        }
+        res.json({ message: 'Read' });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }

@@ -1,13 +1,17 @@
 import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Upload, Check, CreditCard, User, FileText, Info, Save, ClipboardList, Download, Printer, ArrowRight, ArrowLeft } from 'lucide-react';
+import { Upload, Check, CreditCard, User, FileText, Info, Save, ClipboardList, Download, Printer, ArrowRight, ArrowLeft, Lock, X, QrCode } from 'lucide-react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import { useAuth } from '../context/AuthContext';
 
 const SiswaDashboard = () => {
+    const { changePassword } = useAuth();
     const [registration, setRegistration] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [showChangePassword, setShowChangePassword] = useState(false);
+    const [showMessages, setShowMessages] = useState(false);
 
     const fetchRegistration = async () => {
         try {
@@ -49,6 +53,39 @@ const SiswaDashboard = () => {
                     <StepItem active={currentStage === 3} done={currentStage > 3} number={3} text="Pembayaran" />
                     <StepItem active={currentStage === 4} done={currentStage > 4} number={4} text="Formulir Lengkap" />
                     <StepItem active={currentStage === 5} done={currentStage > 5} number={5} text="Selesai" />
+
+                    <div style={{ marginTop: '2rem', paddingTop: '1rem', borderTop: '1px solid rgba(0,0,0,0.1)' }}>
+                        <button
+                            onClick={() => setShowMessages(true)}
+                            className="btn"
+                            style={{
+                                width: '100%',
+                                justifyContent: 'flex-start',
+                                background: 'transparent',
+                                color: 'var(--text-foreground)',
+                                padding: '0.5rem',
+                                border: '1px solid var(--border)',
+                                marginBottom: '0.5rem'
+                            }}
+                        >
+                            <User size={16} style={{ marginRight: '0.5rem' }} /> Pesan / Notifikasi
+                        </button>
+
+                        <button
+                            onClick={() => setShowChangePassword(true)}
+                            className="btn"
+                            style={{
+                                width: '100%',
+                                justifyContent: 'flex-start',
+                                background: 'transparent',
+                                color: 'var(--text-foreground)',
+                                padding: '0.5rem',
+                                border: '1px solid var(--border)'
+                            }}
+                        >
+                            <Lock size={16} style={{ marginRight: '0.5rem' }} /> Ganti Password
+                        </button>
+                    </div>
                 </div>
 
                 {/* Main Content */}
@@ -72,7 +109,141 @@ const SiswaDashboard = () => {
                     </AnimatePresence>
                 </div>
             </div>
-        </div>
+
+            {/* Messages Modal */}
+            {
+                showMessages && (
+                    <div style={{
+                        position: 'fixed', inset: 0, zIndex: 1000,
+                        background: 'rgba(0,0,0,0.5)', display: 'flex',
+                        alignItems: 'center', justifyContent: 'center'
+                    }}>
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.9 }}
+                            style={{
+                                background: 'white', padding: '2rem', borderRadius: '1rem',
+                                maxWidth: '600px', width: '100%', position: 'relative',
+                                maxHeight: '80vh', overflowY: 'auto'
+                            }}
+                        >
+                            <button
+                                onClick={() => setShowMessages(false)}
+                                style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'none', border: 'none', cursor: 'pointer' }}
+                            >
+                                <X size={24} />
+                            </button>
+
+                            <h2 style={{ marginBottom: '1.5rem', fontSize: '1.5rem' }}>Pesan & Notifikasi</h2>
+
+                            <MessagesModalContent />
+                        </motion.div>
+                    </div>
+                )
+            }
+
+            {/* Change Password Modal */}
+            {
+                showChangePassword && (
+                    <div style={{
+                        position: 'fixed', inset: 0, zIndex: 1000,
+                        background: 'rgba(0,0,0,0.5)', display: 'flex',
+                        alignItems: 'center', justifyContent: 'center'
+                    }}>
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.9 }}
+                            style={{
+                                background: 'white', padding: '2rem', borderRadius: '1rem',
+                                maxWidth: '400px', width: '100%', position: 'relative'
+                            }}
+                        >
+                            <button
+                                onClick={() => setShowChangePassword(false)}
+                                style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'none', border: 'none', cursor: 'pointer' }}
+                            >
+                                <X size={24} />
+                            </button>
+
+                            <h2 style={{ marginBottom: '1.5rem', fontSize: '1.5rem' }}>Ganti Password</h2>
+
+                            <ChangePasswordForm
+                                onClose={() => setShowChangePassword(false)}
+                                changePassword={changePassword}
+                            />
+                        </motion.div>
+                    </div>
+                )
+            }
+        </div >
+    );
+};
+
+const ChangePasswordForm = ({ onClose, changePassword }) => {
+    const [oldPassword, setOldPassword] = useState('');
+    const [newPassword, setNewPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [loading, setLoading] = useState(false);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (newPassword !== confirmPassword) {
+            alert('Konfirmasi password baru tidak cocok!');
+            return;
+        }
+        if (newPassword.length < 6) {
+            alert('Password baru minimal 6 karakter');
+            return;
+        }
+
+        setLoading(true);
+        try {
+            await changePassword(oldPassword, newPassword);
+            alert('Password berhasil diubah!');
+            onClose();
+        } catch (err) {
+            alert('Gagal mengubah password: ' + (err.response?.data?.message || err.message));
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <div className="input-group">
+                <label>Password Lama</label>
+                <input
+                    type="password"
+                    value={oldPassword}
+                    onChange={(e) => setOldPassword(e.target.value)}
+                    required
+                />
+            </div>
+            <div className="input-group">
+                <label>Password Baru</label>
+                <input
+                    type="password"
+                    value={newPassword}
+                    onChange={(e) => setNewPassword(e.target.value)}
+                    required
+                    placeholder="Minimal 6 karakter"
+                />
+            </div>
+            <div className="input-group">
+                <label>Konfirmasi Password Baru</label>
+                <input
+                    type="password"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    required
+                />
+            </div>
+            <button type="submit" disabled={loading} className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
+                {loading ? 'Memproses...' : 'Simpan Password Baru'}
+            </button>
+        </form>
     );
 };
 
@@ -163,45 +334,75 @@ const PaymentSection = ({ registration, onDone }) => {
             <h2>Tahap 3: Pembayaran</h2>
 
             <div style={{ background: 'white', borderRadius: '1rem', border: '1px solid var(--border)', overflow: 'hidden', marginBottom: '2rem' }}>
-                <div style={{ padding: '1.5rem', background: 'linear-gradient(135deg, var(--primary), var(--secondary))', color: 'white' }}>
-                    <h3 style={{ margin: 0, fontSize: '1.2rem' }}>Rincian Biaya Pendidikan</h3>
+                <div style={{
+                    padding: '3rem 1.5rem',
+                    background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(/assets/header-investasi.jpg)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    color: 'white',
+                    textAlign: 'center'
+                }}>
+                    <h3 style={{ margin: 0, fontSize: '1.5rem', textShadow: '0 2px 4px rgba(0,0,0,0.5)', letterSpacing: '1px' }}>INVESTASI PENDIDIKAN</h3>
                 </div>
-                <div style={{ padding: '1.5rem' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.5rem 0', borderBottom: '1px solid #e5e7eb' }}>
+                <div style={{ padding: '0.8rem 1.2rem', fontSize: '0.9rem' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.3rem 0', borderBottom: '1px solid #f1f5f9' }}>
                         <span>Formulir Pendaftaran</span>
                         <span style={{ fontWeight: 600 }}>Rp 300.000</span>
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.5rem 0', borderBottom: '1px solid #e5e7eb' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.3rem 0', borderBottom: '1px solid #f1f5f9' }}>
                         <span>Dana Sumbangan Pendidikan (DSP)</span>
                         <span style={{ fontWeight: 600 }}>Rp 3.775.000</span>
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.5rem 0', borderBottom: '1px solid #e5e7eb' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.3rem 0', borderBottom: '1px solid #f1f5f9' }}>
                         <span>Paket Seragam Sekolah</span>
                         <span style={{ fontWeight: 600 }}>Rp 800.000</span>
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.5rem 0', borderBottom: '1px solid #e5e7eb' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.3rem 0', borderBottom: '1px solid #f1f5f9' }}>
                         <span>IPP / SPP Bulan Pertama</span>
                         <span style={{ fontWeight: 600 }}>Rp 350.000</span>
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.5rem 0', borderBottom: '2px dashed #e5e7eb', marginBottom: '1rem' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.3rem 0', borderBottom: '1px dashed #e5e7eb', marginBottom: '0.5rem' }}>
                         <span>Kegiatan MPLS / MOPD</span>
                         <span style={{ fontWeight: 600 }}>Rp 275.000</span>
                     </div>
-                    <div style={{ background: '#f8fafc', padding: '1rem', borderRadius: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                        <span style={{ fontWeight: 'bold', color: 'var(--text-muted)' }}>Total Biaya</span>
-                        <span style={{ fontWeight: '900', color: 'var(--primary)', fontSize: '1.2rem' }}>Rp 5.500.000</span>
+                    <div style={{ background: '#f8fafc', padding: '0.8rem', borderRadius: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <span style={{ fontWeight: 'bold', color: 'var(--text-muted)', fontSize: '0.9rem' }}>Total Biaya</span>
+                        <span style={{ fontWeight: '800', color: 'var(--primary)', fontSize: '1.1rem' }}>Rp 5.500.000</span>
                     </div>
                 </div>
             </div>
 
-            <div style={{ background: 'var(--glass)', padding: '1.5rem', borderRadius: '1rem', margin: '1.5rem 0', border: '1px solid var(--primary)' }}>
-                <p>Silakan transfer biaya pendaftaran ke rekening berikut:</p>
-                <h3 style={{ margin: '1rem 0', color: 'var(--primary)' }}>Bank Mandiri: 1310001611666<br /><span style={{ fontSize: '0.9rem' }}>(A/N Yayasan Pendidikan Dasar dan Menengah Bakti Nusantara)</span></h3>
-                <div style={{ background: '#dbeafe', color: '#1e40af', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem' }}>
-                    <Info size={20} style={{ float: 'left', marginRight: '0.5rem' }} />
-                    <p style={{ margin: 0, fontWeight: 600 }}>Minimal Pembayaran: Rp 300.000</p>
-                    <p style={{ margin: 0, fontSize: '0.9rem' }}>Anda sudah bisa melanjutkan ke tahap pengisian formulir setelah membayar minimal biaya registrasi formulir.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginTop: '2rem' }}>
+                <div style={{ background: 'var(--glass)', padding: '1.5rem', borderRadius: '1rem', border: '1px solid var(--primary)' }}>
+                    <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--primary)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <CreditCard size={20} /> Transfer Bank
+                    </h3>
+                    <p style={{ marginBottom: '0.25rem', color: 'var(--text-muted)' }}>Bank Mandiri</p>
+                    <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--text)', marginBottom: '0.5rem', fontFamily: 'monospace', letterSpacing: '1px' }}>1310001611666</p>
+                    <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>A/N Yayasan Pendidikan Dasar dan Menengah Bakti Nusantara</p>
                 </div>
+
+                <div style={{ background: 'var(--glass)', padding: '1.5rem', borderRadius: '1rem', border: '1px solid var(--primary)' }}>
+                    <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--primary)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <QrCode size={20} /> Scan QRIS
+                    </h3>
+                    <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                        <div style={{ background: 'white', padding: '0.5rem', borderRadius: '0.5rem', border: '1px solid #eee', width: 'fit-content' }}>
+                            <img src="/qris.png" alt="QRIS" style={{ width: '120px', height: '120px', objectFit: 'contain' }} />
+                        </div>
+                        <div>
+                            <p style={{ fontWeight: 'bold', marginBottom: '0.25rem' }}>YWA BAKTI NUSANTARA</p>
+                            <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>NMID: ID1024340461861</p>
+                            <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>Support: GoPay, OVO, DANA, ShopeePay, dll.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style={{ background: '#dbeafe', color: '#1e40af', padding: '1rem', borderRadius: '0.5rem', margin: '1.5rem 0' }}>
+                <Info size={20} style={{ float: 'left', marginRight: '0.5rem' }} />
+                <p style={{ margin: 0, fontWeight: 600 }}>Minimal Pembayaran: Rp 300.000</p>
+                <p style={{ margin: 0, fontSize: '0.9rem' }}>Anda sudah bisa melanjutkan ke tahap pengisian formulir setelah membayar minimal biaya registrasi formulir.</p>
             </div>
 
             <div style={{ marginTop: '2rem' }}>
@@ -968,4 +1169,69 @@ const Row = ({ label, value }) => (
     </tr>
 );
 
+const MessagesModalContent = () => {
+    const [messages, setMessages] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    const fetchMessages = async () => {
+        try {
+            const res = await axios.get('http://localhost:5000/api/student/messages');
+            setMessages(res.data);
+        } catch (err) {
+            console.error(err);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const markAsRead = async (id) => {
+        try {
+            await axios.post(`http://localhost:5000/api/student/messages/${id}/read`);
+            fetchMessages();
+        } catch (err) { }
+    };
+
+    useEffect(() => {
+        fetchMessages();
+    }, []);
+
+    if (loading) return <div className="loader"></div>;
+
+    return (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            {messages.length === 0 ? (
+                <p style={{ textAlign: 'center', color: 'var(--text-muted)' }}>Belum ada pesan.</p>
+            ) : (
+                messages.map(msg => (
+                    <div
+                        key={msg.id}
+                        style={{
+                            padding: '1rem',
+                            background: msg.isRead ? 'var(--glass)' : '#f0f9ff',
+                            borderLeft: `4px solid ${msg.isRead ? 'var(--border)' : 'var(--primary)'}`,
+                            borderRadius: '0.5rem',
+                            border: '1px solid var(--border)',
+                            cursor: !msg.isRead ? 'pointer' : 'default'
+                        }}
+                        onClick={() => !msg.isRead && markAsRead(msg.id)}
+                    >
+                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
+                            <strong style={{ color: msg.isRead ? 'var(--text-foreground)' : 'var(--primary)' }}>{msg.title}</strong>
+                            <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+                                {new Date(msg.createdAt).toLocaleDateString()}
+                            </span>
+                        </div>
+                        <p style={{ margin: 0, fontSize: '0.95rem' }}>{msg.content}</p>
+                    </div>
+                ))
+            )}
+        </div>
+    );
+};
+
 export default SiswaDashboard;
+
+
+
+
+

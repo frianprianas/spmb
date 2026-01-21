@@ -238,36 +238,60 @@ const AdminDashboard = () => {
                     <>
                         {/* Department Stats */}
                         <div className="glass" style={{ padding: '2rem', marginBottom: '2rem' }}>
-                            <h3 style={{ fontSize: '1.25rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                <FileText size={20} color="var(--primary)" /> Statistik Peminat Jurusan
+                            <h3 style={{ fontSize: '1.25rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--primary)', fontWeight: 'bold' }}>
+                                <FileText size={24} /> Statistik Peminat Jurusan
                             </h3>
-                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
                                 {departments.map(dept => {
                                     const count = candidates.filter(c => c.Registration?.Department?.name === dept.name).length;
                                     const quota = dept.quota || 0;
                                     const percentage = quota > 0 ? Math.min((count / quota) * 100, 100) : 0;
+                                    const isFull = percentage >= 100;
 
                                     return (
-                                        <div key={dept.id} style={{ marginBottom: '0.5rem' }}>
-                                            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem', fontSize: '0.9rem' }}>
-                                                <span style={{ fontWeight: '500' }}>{dept.name}</span>
-                                                <span style={{ color: percentage >= 100 ? '#ef4444' : 'var(--primary)', fontWeight: 'bold' }}>
-                                                    {count} / {quota} Terisi
-                                                </span>
+                                        <motion.div
+                                            key={dept.id}
+                                            whileHover={{ y: -5 }}
+                                            style={{
+                                                background: 'white',
+                                                padding: '1.5rem',
+                                                borderRadius: '1rem',
+                                                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                                                border: '1px solid var(--border)',
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                justifyContent: 'space-between'
+                                            }}
+                                        >
+                                            <div style={{ marginBottom: '1rem' }}>
+                                                <h4 style={{ fontSize: '1.1rem', fontWeight: '700', color: 'var(--text)', marginBottom: '0.25rem' }}>{dept.name}</h4>
+                                                <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>Kuota: {quota} Siswa</p>
                                             </div>
-                                            <div style={{ width: '100%', height: '8px', background: 'rgba(255,255,255,0.1)', borderRadius: '4px', overflow: 'hidden' }}>
-                                                <motion.div
-                                                    initial={{ width: 0 }}
-                                                    animate={{ width: `${percentage}%` }}
-                                                    transition={{ duration: 1, ease: 'easeOut' }}
-                                                    style={{
-                                                        height: '100%',
-                                                        background: percentage >= 100 ? '#ef4444' : 'linear-gradient(90deg, var(--primary) 0%, #a855f7 100%)',
-                                                        borderRadius: '4px'
-                                                    }}
-                                                />
+
+                                            <div>
+                                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'end', marginBottom: '0.5rem' }}>
+                                                    <span style={{ fontSize: '2rem', fontWeight: '800', color: isFull ? '#ef4444' : 'var(--primary)' }}>
+                                                        {count}
+                                                    </span>
+                                                    <span style={{ fontSize: '0.9rem', fontWeight: '600', color: isFull ? '#ef4444' : '#10b981', background: isFull ? '#fee2e2' : '#d1fae5', padding: '0.25rem 0.75rem', borderRadius: '1rem' }}>
+                                                        {Math.round(percentage)}% Terisi
+                                                    </span>
+                                                </div>
+
+                                                <div style={{ width: '100%', height: '12px', background: '#e2e8f0', borderRadius: '6px', overflow: 'hidden' }}>
+                                                    <motion.div
+                                                        initial={{ width: 0 }}
+                                                        animate={{ width: `${percentage}%` }}
+                                                        transition={{ duration: 1, ease: 'easeOut' }}
+                                                        style={{
+                                                            height: '100%',
+                                                            background: isFull ? '#ef4444' : 'linear-gradient(90deg, var(--primary) 0%, #38bdf8 100%)',
+                                                            borderRadius: '6px'
+                                                        }}
+                                                    />
+                                                </div>
                                             </div>
-                                        </div>
+                                        </motion.div>
                                     );
                                 })}
                             </div>
@@ -293,7 +317,7 @@ const AdminDashboard = () => {
                             <div style={{ overflowX: 'auto' }}>
                                 <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '1000px' }}>
                                     <thead>
-                                        <tr style={{ background: 'rgba(255,255,255,0.05)', color: 'white', textAlign: 'left' }}>
+                                        <tr style={{ background: 'rgba(2, 132, 199, 0.1)', color: '#075985', textAlign: 'left' }}>
                                             <th style={{ padding: '1rem', borderBottom: '1px solid var(--border)' }}>No</th>
                                             <th style={{ padding: '1rem', borderBottom: '1px solid var(--border)' }}>Nama Lengkap</th>
                                             <th style={{ padding: '1rem', borderBottom: '1px solid var(--border)' }}>NISN</th>

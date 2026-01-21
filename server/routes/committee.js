@@ -5,6 +5,7 @@ const User = require('../models/User');
 const Registration = require('../models/Registration');
 const Department = require('../models/Department');
 const { authenticate, authorize } = require('../middlewares/auth');
+const { sendAdminNotification } = require('../utils/notification');
 
 // Get all offline registrations
 router.get('/students', authenticate, authorize(['panitia']), async (req, res) => {
@@ -56,6 +57,10 @@ router.post('/register-offline', authenticate, authorize(['panitia']), async (re
             isCompleted: true,
             fullData
         });
+
+        // Notify Admin
+        const dept = await Department.findByPk(departmentId);
+        await sendAdminNotification(name, dept ? dept.name : '-');
 
         res.json({ message: 'Siswa berhasil didaftarkan secara offline', registration });
     } catch (error) {

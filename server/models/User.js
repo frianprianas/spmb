@@ -44,6 +44,10 @@ const User = sequelize.define('User', {
         type: DataTypes.DATE,
         allowNull: true,
     },
+    lastPasswordReset: {
+        type: DataTypes.DATE,
+        allowNull: true,
+    },
     isVerified: {
         type: DataTypes.BOOLEAN,
         defaultValue: false,

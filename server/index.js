@@ -8,6 +8,7 @@ const sequelize = require('./models/db');
 const User = require('./models/User');
 const Registration = require('./models/Registration');
 const Department = require('./models/Department');
+const Message = require('./models/Message');
 
 const app = express();
 app.use(cors());
