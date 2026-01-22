@@ -45,6 +45,7 @@ app.use('/api/finance', financeRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/committee', committeeRoutes);
 app.use('/api/wilayah', wilayahRoutes);
+app.get('/api/health', (req, res) => res.json({ status: 'ok', message: 'Server is running' }));
 
 const PORT = process.env.PORT || 5000;
 
