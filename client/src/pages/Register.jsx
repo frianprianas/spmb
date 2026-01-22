@@ -97,7 +97,7 @@ const Register = () => {
 
                 <div style={{ position: 'relative', zIndex: 10, color: 'white', maxWidth: '90%' }}>
                     <h1 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '1.5rem', lineHeight: 1.1, textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
-                        Mulai Perjalanan<br />Pendidikan Anda
+                        Ayo, Tunggu Apalagi
                     </h1>
                     <p style={{ fontSize: '1.1rem', opacity: 0.9, lineHeight: 1.6, textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}>
                         Daftarkan diri Anda sekarang dan jadilah bagian dari civitas akademika kami.
