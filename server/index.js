@@ -107,9 +107,17 @@ sequelize.sync({ alter: true }).then(async () => {
         console.log('Initial departments created');
     }
 
-    app.listen(PORT, () => {
+    // Global error handler
+    app.use((err, req, res, next) => {
+        console.error('[SERVER ERROR]', err);
+        res.status(500).json({ message: 'Internal Server Error', error: err.message });
+    });
+
+    const server = app.listen(PORT, '0.0.0.0', () => {
         console.log(`Server running on port ${PORT}`);
     });
+    server.keepAliveTimeout = 120 * 1000;
+    server.headersTimeout = 120 * 1000;
 }).catch(err => {
     console.error('Unable to connect to database:', err);
 });
