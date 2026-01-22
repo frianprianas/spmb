@@ -45,7 +45,24 @@ app.use('/api/finance', financeRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/committee', committeeRoutes);
 app.use('/api/wilayah', wilayahRoutes);
-app.get('/api/health', (req, res) => res.json({ status: 'ok', message: 'Server is running' }));
+app.get('/api/health', async (req, res) => {
+    try {
+        await sequelize.authenticate();
+        res.json({
+            status: 'ok',
+            uptime: process.uptime(),
+            db: 'connected',
+            timestamp: new Date()
+        });
+    } catch (error) {
+        res.status(500).json({
+            status: 'error',
+            db: 'disconnected',
+            error: error.message,
+            timestamp: new Date()
+        });
+    }
+});
 
 const PORT = process.env.PORT || 5000;
 
