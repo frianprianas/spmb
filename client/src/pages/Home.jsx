@@ -524,7 +524,7 @@ const Home = () => {
                         </div>
                         <span style={{ fontSize: '0.9rem', fontWeight: 500, color: 'var(--text)' }}>Facebook</span>
                     </a>
-                    <a href="https://tiktok.com" target="_blank" rel="noreferrer" style={{ color: '#000000', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
+                    <a href="https://www.tiktok.com/@smkbaktinusantara666" target="_blank" rel="noreferrer" style={{ color: '#000000', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
                         <div className="glass" style={{ padding: '1rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <Music size={24} />
                         </div>
