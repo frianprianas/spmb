@@ -518,7 +518,7 @@ const Home = () => {
                         </div>
                         <span style={{ fontSize: '0.9rem', fontWeight: 500, color: 'var(--text)' }}>Instagram</span>
                     </a>
-                    <a href="https://facebook.com" target="_blank" rel="noreferrer" style={{ color: '#1877F2', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
+                    <a href="https://www.facebook.com/Smkbn666/" target="_blank" rel="noreferrer" style={{ color: '#1877F2', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
                         <div className="glass" style={{ padding: '1rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <Facebook size={24} />
                         </div>
