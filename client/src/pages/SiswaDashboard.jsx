@@ -15,7 +15,7 @@ const SiswaDashboard = () => {
 
     const fetchRegistration = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/api/student/me');
+            const res = await axios.get('/api/student/me');
             setRegistration(res.data);
         } catch (err) {
             console.error(err);
@@ -272,7 +272,7 @@ const UploadDocuments = ({ onDone }) => {
         formData.append('kk', kk);
         formData.append('akte', akte);
         try {
-            await axios.post('http://localhost:5000/api/student/upload-docs', formData);
+            await axios.post('/api/student/upload-docs', formData);
             onDone();
         } catch (err) {
             alert('Upload failed');
@@ -320,7 +320,7 @@ const PaymentSection = ({ registration, onDone }) => {
         formData.append('paymentAmount', amount);
 
         try {
-            await axios.post('http://localhost:5000/api/student/upload-payment', formData);
+            await axios.post('/api/student/upload-payment', formData);
             onDone();
         } catch (err) {
             alert('Upload failed: ' + (err.response?.data?.message || err.message));
@@ -526,7 +526,7 @@ const ComprehensiveForm = ({ registration, onDone }) => {
 
     useEffect(() => {
         // Fetch Provinces via Proxy
-        axios.get('http://localhost:5000/api/wilayah/provinces')
+        axios.get('/api/wilayah/provinces')
             .then(res => {
                 if (res.data && Array.isArray(res.data.data)) {
                     setProvinces(res.data.data);
@@ -551,7 +551,7 @@ const ComprehensiveForm = ({ registration, onDone }) => {
 
         if (code) {
             try {
-                const res = await axios.get(`http://localhost:5000/api/wilayah/regencies/${code}`);
+                const res = await axios.get(`/api/wilayah/regencies/${code}`);
                 setRegencies(res.data.data);
             } catch (e) { console.error(e); }
         }
@@ -568,7 +568,7 @@ const ComprehensiveForm = ({ registration, onDone }) => {
 
         if (code) {
             try {
-                const res = await axios.get(`http://localhost:5000/api/wilayah/districts/${code}`);
+                const res = await axios.get(`/api/wilayah/districts/${code}`);
                 setDistricts(res.data.data);
             } catch (e) { console.error(e); }
         }
@@ -585,7 +585,7 @@ const ComprehensiveForm = ({ registration, onDone }) => {
 
         if (code) {
             try {
-                const res = await axios.get(`http://localhost:5000/api/wilayah/villages/${code}`);
+                const res = await axios.get(`/api/wilayah/villages/${code}`);
                 setVillages(res.data.data);
             } catch (e) { console.error(e); }
         }
@@ -629,7 +629,7 @@ const ComprehensiveForm = ({ registration, onDone }) => {
         });
 
         try {
-            await axios.post('http://localhost:5000/api/student/complete-data', finalizedData);
+            await axios.post('/api/student/complete-data', finalizedData);
             alert('Formulir berhasil disimpan!');
             onDone();
         } catch (err) {

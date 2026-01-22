@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { motion } from 'framer-motion';
 import { Check, X, FileText, ExternalLink } from 'lucide-react';
+import { API_BASE_URL } from '../config';
 
 const FinanceDashboard = () => {
     const [payments, setPayments] = useState([]);
@@ -11,7 +12,7 @@ const FinanceDashboard = () => {
 
     const fetchPayments = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/api/finance/pending-payments');
+            const res = await axios.get('/api/finance/pending-payments');
             setPayments(res.data);
         } catch (err) {
             console.error(err);
@@ -33,7 +34,7 @@ const FinanceDashboard = () => {
         }
 
         try {
-            await axios.post(`http://localhost:5000/api/finance/verify-payment/${id}`, { status, reason });
+            await axios.post(`/api/finance/verify-payment/${id}`, { status, reason });
             fetchPayments();
         } catch (err) {
             alert('Gagal verifikasi');
@@ -108,7 +109,7 @@ const FinanceDashboard = () => {
                                     </td>
                                     <td style={{ padding: '1rem' }}>
                                         <button
-                                            onClick={() => setSelectedImage(`http://localhost:5000/${p.paymentProofUrl.replace(/\\/g, '/')}`)}
+                                            onClick={() => setSelectedImage(`${API_BASE_URL}/${p.paymentProofUrl.replace(/\\/g, '/')}`)}
                                             className="btn-link"
                                             style={{ color: 'var(--primary)', textDecoration: 'underline', background: 'none', border: 'none', cursor: 'pointer' }}
                                         >

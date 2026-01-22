@@ -24,7 +24,7 @@ const Register = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/admin/departments').then(res => setDepartments(res.data)).catch(err => console.error(err));
+        axios.get('/api/admin/departments').then(res => setDepartments(res.data)).catch(err => console.error(err));
         // Fetch schools data
         fetch('/schools_data.json')
             .then(res => res.json())

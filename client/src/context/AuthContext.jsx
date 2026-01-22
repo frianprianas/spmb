@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     const login = async (email, password) => {
-        const res = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+        const res = await axios.post('/api/auth/login', { email, password });
         const { token, user } = res.data;
         localStorage.setItem('token', token);
         localStorage.setItem('user', JSON.stringify(user));
@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     const register = async (data) => {
-        const res = await axios.post('http://localhost:5000/api/auth/register', data);
+        const res = await axios.post('/api/auth/register', data);
         const { token, user } = res.data;
         localStorage.setItem('token', token);
         localStorage.setItem('user', JSON.stringify(user));
@@ -38,19 +38,19 @@ export const AuthProvider = ({ children }) => {
     };
 
     const verifyOtp = async (email, otp) => {
-        await axios.post('http://localhost:5000/api/auth/verify-otp', { email, otp });
+        await axios.post('/api/auth/verify-otp', { email, otp });
         const updatedUser = { ...user, isVerified: true };
         localStorage.setItem('user', JSON.stringify(updatedUser));
         setUser(updatedUser);
     };
 
     const forgotPassword = async (email) => {
-        const res = await axios.post('http://localhost:5000/api/auth/forgot-password', { email });
+        const res = await axios.post('/api/auth/forgot-password', { email });
         return res.data;
     };
 
     const changePassword = async (oldPassword, newPassword) => {
-        const res = await axios.post('http://localhost:5000/api/auth/change-password', { oldPassword, newPassword });
+        const res = await axios.post('/api/auth/change-password', { oldPassword, newPassword });
         return res.data;
     };
 

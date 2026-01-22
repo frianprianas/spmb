@@ -112,7 +112,7 @@ const OtpVerify = () => {
                                     onClick={async () => {
                                         if (confirm('Kirim ulang kode OTP?')) {
                                             try {
-                                                await axios.post('http://localhost:5000/api/auth/resend-otp', { email: user.email });
+                                                await axios.post('/api/auth/resend-otp', { email: user.email });
                                                 alert('Kode OTP baru telah dikirim ke WhatsApp Anda.');
                                             } catch (err) {
                                                 alert('Gagal kirim ulang: ' + (err.response?.data?.message || err.message));

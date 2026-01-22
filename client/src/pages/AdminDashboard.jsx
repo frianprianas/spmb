@@ -3,6 +3,7 @@ import axios from 'axios';
 import { motion } from 'framer-motion';
 import { Plus, Trash2, Edit2, Save, X, Users, School, Search, FileText } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import { API_BASE_URL } from '../config';
 
 const AdminDashboard = () => {
     const { token } = useAuth(); // Assuming auth context provides the token for authorized requests
@@ -21,7 +22,7 @@ const AdminDashboard = () => {
 
     const fetchDepts = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/api/admin/departments');
+            const res = await axios.get('/api/admin/departments');
             setDepartments(res.data);
         } catch (err) {
             console.error(err);
@@ -33,7 +34,7 @@ const AdminDashboard = () => {
             const config = {
                 headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
             };
-            const res = await axios.get('http://localhost:5000/api/admin/candidates', config);
+            const res = await axios.get('/api/admin/candidates', config);
             setCandidates(res.data);
         } catch (err) {
             console.error(err);
@@ -54,7 +55,7 @@ const AdminDashboard = () => {
         e.preventDefault();
         try {
             const config = { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } };
-            await axios.post('http://localhost:5000/api/admin/departments', newDept, config);
+            await axios.post('/api/admin/departments', newDept, config);
             setNewDept({ name: '', quota: 0 });
             fetchDepts();
         } catch (err) {
@@ -66,7 +67,7 @@ const AdminDashboard = () => {
         if (confirm('Hapus jurusan ini?')) {
             try {
                 const config = { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } };
-                await axios.delete(`http://localhost:5000/api/admin/departments/${id}`, config);
+                await axios.delete(`/api/admin/departments/${id}`, config);
                 fetchDepts();
             } catch (err) {
                 alert('Gagal hapus');
@@ -77,7 +78,7 @@ const AdminDashboard = () => {
     const handleUpdateDept = async (id) => {
         try {
             const config = { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } };
-            await axios.put(`http://localhost:5000/api/admin/departments/${id}`, editingDept, config);
+            await axios.put(`/api/admin/departments/${id}`, editingDept, config);
             setEditingDept(null);
             fetchDepts();
         } catch (err) {
@@ -204,7 +205,7 @@ const AdminDashboard = () => {
                                                     {c.Registration?.paymentProofUrl && (
                                                         <button
                                                             onClick={() => {
-                                                                const url = `http://localhost:5000/${c.Registration.paymentProofUrl.replace(/\\/g, '/')}`;
+                                                                const url = `${API_BASE_URL}/${c.Registration.paymentProofUrl.replace(/\\/g, '/')}`;
                                                                 console.log('Opening Image:', url);
                                                                 setSelectedImage(url);
                                                             }}

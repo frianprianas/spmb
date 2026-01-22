@@ -81,7 +81,7 @@ const CommitteeDashboard = () => {
     useEffect(() => {
         fetchDepartments();
         // Fetch Provinces via Proxy
-        axios.get('http://localhost:5000/api/wilayah/provinces')
+        axios.get('/api/wilayah/provinces')
             .then(res => {
                 if (res.data && Array.isArray(res.data.data)) {
                     setProvinces(res.data.data);
@@ -109,7 +109,7 @@ const CommitteeDashboard = () => {
 
     const fetchDepartments = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/api/admin/departments');
+            const res = await axios.get('/api/admin/departments');
             if (Array.isArray(res.data)) {
                 setDepartments(res.data);
             } else {
@@ -123,7 +123,7 @@ const CommitteeDashboard = () => {
 
     const fetchStudents = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/api/committee/students');
+            const res = await axios.get('/api/committee/students');
             if (Array.isArray(res.data)) {
                 setStudents(res.data);
             } else {
@@ -148,7 +148,7 @@ const CommitteeDashboard = () => {
 
         if (code) {
             try {
-                const res = await axios.get(`http://localhost:5000/api/wilayah/regencies/${code}`);
+                const res = await axios.get(`/api/wilayah/regencies/${code}`);
                 if (res.data && Array.isArray(res.data.data)) {
                     setRegencies(res.data.data);
                 }
@@ -168,7 +168,7 @@ const CommitteeDashboard = () => {
 
         if (code) {
             try {
-                const res = await axios.get(`http://localhost:5000/api/wilayah/districts/${code}`);
+                const res = await axios.get(`/api/wilayah/districts/${code}`);
                 if (res.data && Array.isArray(res.data.data)) {
                     setDistricts(res.data.data);
                 }
@@ -188,7 +188,7 @@ const CommitteeDashboard = () => {
 
         if (code) {
             try {
-                const res = await axios.get(`http://localhost:5000/api/wilayah/villages/${code}`);
+                const res = await axios.get(`/api/wilayah/villages/${code}`);
                 if (res.data && Array.isArray(res.data.data)) {
                     setVillages(res.data.data);
                 }
@@ -272,7 +272,7 @@ const CommitteeDashboard = () => {
         if (!finalizedData.password) finalizedData.password = '123456';
 
         try {
-            await axios.post('http://localhost:5000/api/committee/register-offline', finalizedData);
+            await axios.post('/api/committee/register-offline', finalizedData);
             alert('Pendaftaran Offline Berhasil!');
             setFormData(initialFormState);
             setStep(1);
