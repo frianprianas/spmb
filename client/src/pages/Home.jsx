@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, ShieldCheck, CreditCard, FileText, MapPin, Phone, Mail, X, Instagram, Facebook, MessageCircle, Music, Wallet } from 'lucide-react';
+import { ArrowRight, CheckCircle, ShieldCheck, CreditCard, FileText, MapPin, Phone, Mail, X, Instagram, Facebook, MessageCircle, Music, Wallet, LogIn } from 'lucide-react';
 import schoolImg from '../assets/school.jpg';
 import hero2 from '../assets/hero_2.png';
 import hero3 from '../assets/hero_3.png';
@@ -74,8 +74,9 @@ const Home = () => {
                 gridTemplateColumns: '1fr 1fr',
                 gap: '4rem',
                 alignItems: 'center',
-                padding: '80px 0',
-                minHeight: '80vh'
+                padding: '20px 0',
+                minHeight: '80vh',
+                marginTop: '-80px'
             }}>
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
@@ -95,8 +96,8 @@ const Home = () => {
                         <Link to="/register" className="btn btn-primary" style={{ padding: '0.8rem 1.5rem', fontSize: '1rem' }}>
                             Daftar Sekarang <ArrowRight size={18} />
                         </Link>
-                        <Link to="/login" className="btn" style={{ border: '1px solid var(--border)', padding: '0.8rem 1.5rem', fontSize: '1rem', background: 'white' }}>
-                            Masuk
+                        <Link to="/login" className="btn" style={{ border: '1px solid var(--border)', padding: '0.8rem 1.5rem', fontSize: '1rem', background: 'white', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                            <LogIn size={18} /> Masuk
                         </Link>
                         <motion.button
                             onClick={() => setShowPricing(true)}
@@ -117,7 +118,7 @@ const Home = () => {
                     </div>
                 </motion.div>
 
-                <div style={{ position: 'relative', height: '500px', width: '100%' }}>
+                <div style={{ position: 'relative', height: '500px', width: '100%', marginTop: '6rem' }}>
                     <div style={{
                         position: 'absolute',
                         top: '-20px',
@@ -504,7 +505,7 @@ const Home = () => {
                 <div>
                     <Mail size={32} color="var(--primary)" style={{ marginBottom: '1rem' }} />
                     <h3>Email</h3>
-                    <p style={{ opacity: 0.7 }}>info@smkbn666.sch.id</p>
+                    <p style={{ opacity: 0.7 }}>baknus@smkbn666.sch.id</p>
                 </div>
             </section>
 
