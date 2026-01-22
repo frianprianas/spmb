@@ -499,7 +499,7 @@ const Home = () => {
                 <div>
                     <Phone size={32} color="var(--primary)" style={{ marginBottom: '1rem' }} />
                     <h3>Kontak</h3>
-                    <p style={{ opacity: 0.7 }}>(022) 63730220 / 0821-2163-5987</p>
+                    <p style={{ opacity: 0.7 }}>(022) 63730220 / 0888-9485-891</p>
                 </div>
                 <div>
                     <Mail size={32} color="var(--primary)" style={{ marginBottom: '1rem' }} />
@@ -530,7 +530,7 @@ const Home = () => {
                         </div>
                         <span style={{ fontSize: '0.9rem', fontWeight: 500, color: 'var(--text)' }}>TikTok</span>
                     </a>
-                    <a href="https://wa.me/6282121635987" target="_blank" rel="noreferrer" style={{ color: '#25D366', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
+                    <a href="https://wa.me/628889485891" target="_blank" rel="noreferrer" style={{ color: '#25D366', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
                         <div className="glass" style={{ padding: '1rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <MessageCircle size={24} />
                         </div>
