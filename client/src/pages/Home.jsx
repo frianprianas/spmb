@@ -512,7 +512,7 @@ const Home = () => {
             <section style={{ textAlign: 'center', paddingBottom: '4rem' }}>
                 <h3 style={{ marginBottom: '1.5rem', color: 'var(--text-muted)' }}>Ikuti Kami di Sosial Media</h3>
                 <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
-                    <a href="https://instagram.com" target="_blank" rel="noreferrer" style={{ color: '#E1306C', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
+                    <a href="https://www.instagram.com/smkbaktinusantara666/" target="_blank" rel="noreferrer" style={{ color: '#E1306C', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
                         <div className="glass" style={{ padding: '1rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <Instagram size={24} />
                         </div>
