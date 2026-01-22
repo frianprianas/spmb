@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const JWT_SECRET = process.env.JWT_SECRET || 'spmb_secret_key_2026';
 const User = require('../models/User');
 const Registration = require('../models/Registration');
 const { sendWhatsapp } = require('../utils/whatsapp');
@@ -39,7 +40,7 @@ router.post('/register', async (req, res) => {
         // Send OTP via WhatsApp
         await sendWhatsapp(wa, `Selamat Datang ${name} silahkan Login di web dan masukan OTP ini yang berlaku 5 menit . ${otp} SPMB Online SMK Bakti Nusantara 666`);
 
-        const token = jwt.sign({ id: user.id, role: user.role }, process.env.JWT_SECRET);
+        const token = jwt.sign({ id: user.id, role: user.role }, JWT_SECRET);
         res.json({
             token,
             user: {
@@ -90,7 +91,7 @@ router.post('/login', async (req, res) => {
         const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) return res.status(400).json({ message: 'Invalid credentials' });
 
-        const token = jwt.sign({ id: user.id, role: user.role }, process.env.JWT_SECRET);
+        const token = jwt.sign({ id: user.id, role: user.role }, JWT_SECRET);
         res.json({
             token,
             user: {
@@ -188,7 +189,7 @@ router.post('/change-password', async (req, res) => {
         const token = req.headers.authorization?.split(' ')[1];
         if (!token) return res.status(401).json({ message: 'No token provided' });
 
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const decoded = jwt.verify(token, JWT_SECRET);
         const userId = decoded.id;
 
         const { oldPassword, newPassword } = req.body;
