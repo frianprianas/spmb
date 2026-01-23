@@ -14,6 +14,14 @@ router.post('/register', async (req, res) => {
         const existingUser = await User.findOne({ where: { email } });
         if (existingUser) return res.status(400).json({ message: 'Email sudah terdaftar' });
 
+        // Cek Maksimal 2 Akun per Nomor WA
+        if (wa) {
+            const waCount = await User.count({ where: { wa } });
+            if (waCount >= 2) {
+                return res.status(400).json({ message: 'Nomor WhatsApp ini sudah digunakan oleh 2 akun. Mohon gunakan nomor lain.' });
+            }
+        }
+
         const otp = Math.floor(100000 + Math.random() * 900000).toString();
         const otpExpiresAt = new Date(Date.now() + 5 * 60 * 1000); // 5 minutes
         const hashedPassword = await bcrypt.hash(password, 10);
