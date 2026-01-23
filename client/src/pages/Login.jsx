@@ -44,9 +44,9 @@ const Login = () => {
     };
 
     return (
-        <div style={{ display: 'flex', minHeight: '100vh', width: '100%' }}>
+        <div className="login-container" style={{ display: 'flex', minHeight: '100vh', width: '100%' }}>
             {/* Left Side - Image */}
-            <div style={{
+            <div className="login-image-section" style={{
                 flex: '1.5',
                 backgroundImage: `url(${loginBg})`,
                 backgroundSize: 'cover',
@@ -74,7 +74,7 @@ const Login = () => {
             </div>
 
             {/* Right Side - Form */}
-            <div style={{
+            <div className="login-form-section" style={{
                 flex: '1',
                 display: 'flex',
                 alignItems: 'center',
@@ -89,7 +89,7 @@ const Login = () => {
                     transition={{ duration: 0.5 }}
                     style={{ width: '100%', maxWidth: '450px' }}
                 >
-                    <div style={{
+                    <div className="login-card" style={{
                         background: 'linear-gradient(135deg, #38bdf8, #0284c7)',
                         padding: '3rem',
                         borderRadius: '1.5rem',

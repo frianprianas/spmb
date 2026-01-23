@@ -71,9 +71,9 @@ const Register = () => {
     };
 
     return (
-        <div style={{ display: 'flex', minHeight: '100vh', width: '100%' }}>
+        <div className="register-container" style={{ display: 'flex', minHeight: '100vh', width: '100%' }}>
             {/* Left Side - Image (Fixed) */}
-            <div style={{
+            <div className="register-image-section" style={{
                 flex: '1.2',
                 backgroundImage: `url(${registerBg})`,
                 backgroundSize: 'cover',
@@ -107,10 +107,10 @@ const Register = () => {
             </div>
 
             {/* Spacer for the fixed left side */}
-            <div style={{ flex: '1.2', visibility: 'hidden', width: '45%' }}></div>
+            <div className="register-spacer" style={{ flex: '1.2', visibility: 'hidden', width: '45%' }}></div>
 
             {/* Right Side - Form (Scrollable) */}
-            <div style={{
+            <div className="register-form-section" style={{
                 flex: '1.5',
                 display: 'flex',
                 flexDirection: 'column',
@@ -128,15 +128,15 @@ const Register = () => {
                     transition={{ duration: 0.5 }}
                     style={{ width: '100%', maxWidth: '700px' }}
                 >
-                    <div className="glass" style={{ padding: '3rem', border: '1px solid rgba(255,255,255,0.05)' }}>
+                    <div className="glass register-card" style={{ padding: '3rem', border: '1px solid rgba(255,255,255,0.05)' }}>
                         <div style={{ marginBottom: '2rem', textAlign: 'center' }}>
                             <h2 style={{ fontSize: '2rem', fontWeight: '700', marginBottom: '0.5rem', color: 'white' }}>Registrasi Siswa</h2>
                             <p style={{ color: 'var(--text-muted)' }}>Silahkan lengkapi data diri Anda</p>
                         </div>
 
-                        <form onSubmit={handleSubmit} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+                        <form onSubmit={handleSubmit} className="form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
 
-                            <div className="input-group" style={{ gridColumn: 'span 2' }}>
+                            <div className="input-group input-span-2" style={{ gridColumn: 'span 2' }}>
                                 <label>Nama Lengkap</label>
                                 <input name="name" type="text" value={formData.name} onChange={handleChange} required placeholder="Nama Lengkap Sesuai Ijazah" style={{ padding: '0.8rem' }} />
                             </div>
@@ -159,7 +159,7 @@ const Register = () => {
                                 <input name="wa" type="text" placeholder="08..." value={formData.wa} onChange={handleChange} required style={{ padding: '0.8rem' }} />
                             </div>
 
-                            <div className="input-group" style={{ gridColumn: 'span 2' }}>
+                            <div className="input-group input-span-2" style={{ gridColumn: 'span 2' }}>
                                 <label>Alamat Lengkap</label>
                                 <textarea name="alamat" rows="2" value={formData.alamat} onChange={handleChange} required placeholder="Jalan, RT/RW, Kecamatan, Kota/Kabupaten" style={{ padding: '0.8rem', resize: 'vertical' }} />
                             </div>
@@ -222,7 +222,7 @@ const Register = () => {
                                 </select>
                             </div>
 
-                            <button type="submit" className="btn btn-primary" style={{ gridColumn: 'span 2', justifyContent: 'center', marginTop: '1rem', padding: '1rem', fontSize: '1.1rem' }}>
+                            <button type="submit" className="btn btn-primary input-span-2" style={{ gridColumn: 'span 2', justifyContent: 'center', marginTop: '1rem', padding: '1rem', fontSize: '1.1rem' }}>
                                 Daftar & Kirim OTP
                             </button>
                         </form>
