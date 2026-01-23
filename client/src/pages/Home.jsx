@@ -69,7 +69,7 @@ const Home = () => {
             }} />
 
             {/* Hero Section */}
-            <section style={{
+            <section className="hero-section" style={{
                 display: 'grid',
                 gridTemplateColumns: '1fr 1fr',
                 gap: '4rem',
@@ -83,7 +83,7 @@ const Home = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
+                    <div className="hero-badge" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
                         <span className="badge badge-verified" style={{ padding: '0.5rem 1rem' }}>Pendaftaran 2026/2027 Dibuka</span>
                     </div>
                     <h1 style={{ fontSize: '4rem', fontWeight: 900, lineHeight: 1.1, marginBottom: '2rem' }}>
@@ -92,7 +92,7 @@ const Home = () => {
                     <p style={{ color: 'var(--text-muted)', fontSize: '1.25rem', marginBottom: '3rem', lineHeight: 1.6 }}>
                         Sistem Penerimaan Murid Baru yang terintegrasi, transparan, dan sepenuhnya digital. Mulai langkah kesuksesanmu bersama sekolah vokasi terbaik.
                     </p>
-                    <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                    <div className="hero-buttons" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                         <Link to="/register" className="btn btn-primary" style={{ padding: '0.8rem 1.5rem', fontSize: '1rem' }}>
                             Daftar Sekarang <ArrowRight size={18} />
                         </Link>
@@ -118,7 +118,7 @@ const Home = () => {
                     </div>
                 </motion.div>
 
-                <div style={{ position: 'relative', height: '500px', width: '100%', marginTop: '6rem' }}>
+                <div className="hero-image-container" style={{ position: 'relative', height: '500px', width: '100%', marginTop: '6rem' }}>
                     <div style={{
                         position: 'absolute',
                         top: '-20px',
@@ -182,7 +182,7 @@ const Home = () => {
                     <p style={{ color: 'var(--text-muted)' }}>Pilih jurusan impianmu dan raih masa depan gemilang.</p>
                 </div>
 
-                <div style={{
+                <div className="flyers-grid" style={{
                     display: 'grid',
                     gridTemplateColumns: 'repeat(4, 1fr)',
                     gap: '1.5rem',
@@ -440,7 +440,7 @@ const Home = () => {
             </AnimatePresence>
 
             {/* Info Section */}
-            <section className="glass" style={{ padding: '4rem', marginBottom: '80px', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem', textAlign: 'center' }}>
+            <section className="glass info-section" style={{ padding: '4rem', marginBottom: '80px', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem', textAlign: 'center' }}>
                 <div
                     style={{ position: 'relative', cursor: 'pointer' }}
                     onMouseEnter={() => setShowMap(true)}
@@ -512,7 +512,7 @@ const Home = () => {
             {/* Social Media Section - Added to Footer */}
             <section style={{ textAlign: 'center', paddingBottom: '4rem' }}>
                 <h3 style={{ marginBottom: '1.5rem', color: 'var(--text-muted)' }}>Ikuti Kami di Sosial Media</h3>
-                <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
+                <div className="social-links" style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
                     <a href="https://www.instagram.com/smkbaktinusantara666/" target="_blank" rel="noreferrer" style={{ color: '#E1306C', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
                         <div className="glass" style={{ padding: '1rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <Instagram size={24} />
@@ -544,10 +544,10 @@ const Home = () => {
 };
 
 const TimelineStep = ({ number, icon, title, desc, isLast }) => (
-    <div style={{ display: 'flex', gap: '3rem', position: 'relative', marginBottom: isLast ? 0 : '4rem' }}>
+    <div className="timeline-step" style={{ display: 'flex', gap: '3rem', position: 'relative', marginBottom: isLast ? 0 : '4rem' }}>
         {/* Line */}
         {!isLast && (
-            <div style={{
+            <div className="timeline-line" style={{
                 position: 'absolute',
                 top: '70px',
                 left: '34px',
@@ -564,6 +564,7 @@ const TimelineStep = ({ number, icon, title, desc, isLast }) => (
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
+            className="timeline-bubble"
             style={{
                 width: '70px',
                 height: '70px',
@@ -587,10 +588,10 @@ const TimelineStep = ({ number, icon, title, desc, isLast }) => (
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             whileHover={{ x: 10 }}
-            className="glass"
+            className="glass timeline-content"
             style={{ padding: '2rem', flex: 1, textAlign: 'left' }}
         >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
+            <div className="timeline-content-header" style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
                 <span style={{
                     background: 'var(--primary)',
                     color: 'white',
