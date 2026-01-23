@@ -273,4 +273,85 @@ body {
   .login-card div {
     color: var(--text-muted) !important;
   }
+
+  /* --- HOME PAGE MOBILE IMPROVEMENTS --- */
+
+  /* Hero Section */
+  .hero-section {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+    text-align: center;
+    margin-top: 0 !important;
+    padding-top: 2rem !important;
+  }
+
+  .hero-badge {
+    justify-content: center !important;
+  }
+
+  .hero-buttons {
+    justify-content: center !important;
+  }
+
+  .hero-image-container {
+    margin-top: 1rem !important;
+    height: 300px !important;
+  }
+
+  .hero-section h1 {
+    font-size: 2.25rem !important;
+  }
+
+  /* Flyers (Kompetensi Keahlian) */
+  .flyers-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    padding: 0 1rem !important;
+  }
+
+  /* Info/Contact Section */
+  .info-section {
+    grid-template-columns: 1fr !important;
+    padding: 2rem 1.5rem !important;
+    gap: 3rem !important;
+  }
+
+  .info-section>div {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 2rem;
+  }
+
+  .info-section>div:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  /* Timeline */
+  .timeline-step {
+    flex-direction: column;
+    gap: 1.5rem !important;
+    margin-bottom: 3rem !important;
+  }
+
+  .timeline-line {
+    display: none !important;
+  }
+
+  .timeline-bubble {
+    margin: 0 auto;
+  }
+
+  .timeline-content {
+    text-align: center !important;
+  }
+
+  .timeline-content-header {
+    justify-content: center !important;
+  }
+
+  /* Social Links */
+  .social-links {
+    flex-wrap: wrap;
+    gap: 1rem !important;
+  }
 }
