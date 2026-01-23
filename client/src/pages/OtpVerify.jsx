@@ -75,8 +75,8 @@ const OtpVerify = () => {
                             <ShieldCheck size={48} color="var(--primary)" style={{ marginBottom: '1rem' }} />
                             <h2 style={{ fontSize: '2rem', fontWeight: '700', marginBottom: '0.5rem', color: 'white' }}>Verifikasi OTP</h2>
                             <p style={{ color: 'var(--text-muted)' }}>
-                                Masukkan 6 digit kode yang dikirim ke nomor WhatsApp Anda: <br />
-                                <span style={{ color: 'white', fontWeight: '600' }}>{user.wa || user.email}</span>
+                                Masukkan 6 digit kode yang dikirim ke: <br />
+                                <span style={{ color: 'white', fontWeight: '600' }}>{user.wa} / {user.email}</span>
                             </p>
                         </div>
 
@@ -107,21 +107,39 @@ const OtpVerify = () => {
                         <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
                             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
                                 Belum menerima kode?
-                                <span
-                                    style={{ color: 'var(--primary)', cursor: 'pointer', fontWeight: '600', marginLeft: '0.5rem' }}
-                                    onClick={async () => {
-                                        if (confirm('Kirim ulang kode OTP?')) {
-                                            try {
-                                                await axios.post('/api/auth/resend-otp', { email: user.email });
-                                                alert('Kode OTP baru telah dikirim ke WhatsApp Anda.');
-                                            } catch (err) {
-                                                alert('Gagal kirim ulang: ' + (err.response?.data?.message || err.message));
+                                <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginTop: '0.5rem' }}>
+                                    <span
+                                        style={{ color: 'var(--primary)', cursor: 'pointer', fontWeight: '600' }}
+                                        onClick={async () => {
+                                            if (confirm('Kirim ulang kode OTP ke WhatsApp?')) {
+                                                try {
+                                                    await axios.post('/api/auth/resend-otp', { email: user.email, otpMethod: 'wa' });
+                                                    alert('Kode OTP baru telah dikirim ke WhatsApp Anda.');
+                                                } catch (err) {
+                                                    alert('Gagal kirim ulang: ' + (err.response?.data?.message || err.message));
+                                                }
                                             }
-                                        }
-                                    }}
-                                >
-                                    Kirim Ulang
-                                </span>
+                                        }}
+                                    >
+                                        Kirim ke WA
+                                    </span>
+                                    <span style={{ color: 'var(--text-muted)' }}>|</span>
+                                    <span
+                                        style={{ color: 'var(--primary)', cursor: 'pointer', fontWeight: '600' }}
+                                        onClick={async () => {
+                                            if (confirm('Kirim ulang kode OTP ke Email?')) {
+                                                try {
+                                                    await axios.post('/api/auth/resend-otp', { email: user.email, otpMethod: 'email' });
+                                                    alert('Kode OTP baru telah dikirim ke Email Anda.');
+                                                } catch (err) {
+                                                    alert('Gagal kirim ulang: ' + (err.response?.data?.message || err.message));
+                                                }
+                                            }
+                                        }}
+                                    >
+                                        Kirim ke Email
+                                    </span>
+                                </div>
                             </p>
                         </div>
                     </div>

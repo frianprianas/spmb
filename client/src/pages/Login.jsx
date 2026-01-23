@@ -22,7 +22,13 @@ const Login = () => {
             if (user.role === 'admin') navigate('/admin');
             else if (user.role === 'keuangan') navigate('/finance');
             else if (user.role === 'panitia') navigate('/committee');
-            else navigate('/siswa');
+            else {
+                if (!user.isVerified) {
+                    navigate('/verify-otp');
+                } else {
+                    navigate('/siswa');
+                }
+            }
         } catch (err) {
             alert('Login failed: ' + (err.response?.data?.message || err.message));
         }

@@ -6,10 +6,11 @@ const JWT_SECRET = process.env.JWT_SECRET || 'spmb_secret_key_2026';
 const User = require('../models/User');
 const Registration = require('../models/Registration');
 const { sendWhatsapp } = require('../utils/whatsapp');
+const { sendEmail } = require('../utils/email');
 
 router.post('/register', async (req, res) => {
     try {
-        const { name, email, password, nisn, wa, alamat, hp, sekolahAsal, departmentId } = req.body;
+        const { name, email, password, nisn, wa, alamat, hp, sekolahAsal, departmentId, otpMethod } = req.body;
 
         const existingUser = await User.findOne({ where: { email } });
         if (existingUser) return res.status(400).json({ message: 'Email sudah terdaftar' });
@@ -46,7 +47,14 @@ router.post('/register', async (req, res) => {
         });
 
         // Send OTP via WhatsApp
-        await sendWhatsapp(wa, `Selamat Datang ${name} silahkan Login di web dan masukan OTP ini yang berlaku 5 menit . ${otp} SPMB Online SMK Bakti Nusantara 666`);
+        // Send OTP based on method
+        const message = `Selamat Datang ${name} silahkan Login di web dan masukan OTP ini yang berlaku 5 menit . ${otp} SPMB Online SMK Bakti Nusantara 666`;
+
+        if (otpMethod === 'email') {
+            await sendEmail(email, 'Kode OTP SPMB SMK Bakti Nusantara 666', message);
+        } else {
+            await sendWhatsapp(wa, message);
+        }
 
         const token = jwt.sign({ id: user.id, role: user.role }, JWT_SECRET);
         res.json({
@@ -118,7 +126,7 @@ router.post('/login', async (req, res) => {
 
 router.post('/resend-otp', async (req, res) => {
     try {
-        const { email } = req.body;
+        const { email, otpMethod } = req.body;
         const user = await User.findOne({ where: { email } });
 
         if (!user) return res.status(404).json({ message: 'User tidak ditemukan' });
@@ -143,7 +151,13 @@ router.post('/resend-otp', async (req, res) => {
         user.lastOtpResend = now;
         await user.save();
 
-        await sendWhatsapp(user.wa, `Selamat Datang ${user.name} silahkan Login di web dan masukan OTP ini yang berlaku 5 menit . ${otp} SPMB Online SMK Bakti Nusantara 666`);
+        const message = `Selamat Datang ${user.name} silahkan Login di web dan masukan OTP ini yang berlaku 5 menit . ${otp} SPMB Online SMK Bakti Nusantara 666`;
+
+        if (otpMethod === 'email') {
+            await sendEmail(user.email, 'Kode OTP Baru SPMB SMK Bakti Nusantara 666', message);
+        } else {
+            await sendWhatsapp(user.wa, message);
+        }
 
         res.json({ message: 'Kode OTP baru berhasil dikirim via WhatsApp' });
     } catch (error) {

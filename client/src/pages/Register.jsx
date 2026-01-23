@@ -14,7 +14,9 @@ const Register = () => {
         wa: '',
         alamat: '',
         sekolahAsal: '',
-        departmentId: ''
+
+        departmentId: '',
+        otpMethod: 'wa' // Default to WA
     });
     const [schools, setSchools] = useState([]);
     const [filteredSchools, setFilteredSchools] = useState([]);
@@ -220,6 +222,32 @@ const Register = () => {
                                         <option key={d.id} value={d.id}>{d.name} (Sisa Kuota: {d.quota})</option>
                                     ))}
                                 </select>
+                            </div>
+
+                            <div className="input-group input-span-2" style={{ gridColumn: 'span 2' }}>
+                                <label style={{ display: 'block', marginBottom: '0.5rem' }}>Metode Verifikasi OTP</label>
+                                <div style={{ display: 'flex', gap: '2rem' }}>
+                                    <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}>
+                                        <input
+                                            type="radio"
+                                            name="otpMethod"
+                                            value="wa"
+                                            checked={formData.otpMethod === 'wa'}
+                                            onChange={handleChange}
+                                        />
+                                        WhatsApp
+                                    </label>
+                                    <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}>
+                                        <input
+                                            type="radio"
+                                            name="otpMethod"
+                                            value="email"
+                                            checked={formData.otpMethod === 'email'}
+                                            onChange={handleChange}
+                                        />
+                                        Email
+                                    </label>
+                                </div>
                             </div>
 
                             <button type="submit" className="btn btn-primary input-span-2" style={{ gridColumn: 'span 2', justifyContent: 'center', marginTop: '1rem', padding: '1rem', fontSize: '1.1rem' }}>
