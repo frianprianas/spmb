@@ -10,7 +10,9 @@ const { sendWhatsapp } = require('../utils/whatsapp');
 const { sendAdminNotification } = require('../utils/notification');
 
 const storage = multer.diskStorage({
-    destination: 'uploads/',
+    destination: (req, file, cb) => {
+        cb(null, path.join(__dirname, '../uploads'));
+    },
     filename: (req, file, cb) => {
         cb(null, `${Date.now()}-${file.originalname}`);
     },
@@ -34,8 +36,8 @@ router.post('/upload-docs', authenticate, authorize(['siswa']), upload.fields([{
         const reg = await Registration.findOne({ where: { userId: req.user.id } });
         if (!reg) return res.status(404).json({ message: 'Registration not found' });
 
-        if (req.files.kk) reg.kkUrl = req.files.kk[0].path;
-        if (req.files.akte) reg.akteUrl = req.files.akte[0].path;
+        if (req.files.kk) reg.kkUrl = 'uploads/' + req.files.kk[0].filename;
+        if (req.files.akte) reg.akteUrl = 'uploads/' + req.files.akte[0].filename;
 
         if (reg.stage === 1) reg.stage = 2;
         await reg.save();
@@ -61,7 +63,7 @@ router.post('/upload-payment', authenticate, authorize(['siswa']), upload.single
         });
         if (!reg) return res.status(404).json({ message: 'Registration not found' });
 
-        reg.paymentProofUrl = req.file.path;
+        reg.paymentProofUrl = 'uploads/' + req.file.filename;
         reg.paymentStatus = 'pending';
         reg.paymentAmount = parseInt(paymentAmount);
 
