@@ -11,7 +11,7 @@ const { sendAdminNotification } = require('../utils/notification');
 router.get('/students', authenticate, authorize(['panitia']), async (req, res) => {
     try {
         const students = await Registration.findAll({
-            where: { registrationType: 'offline' },
+            where: { isCompleted: true },
             include: [{ model: User }, { model: Department }],
             order: [['createdAt', 'DESC']]
         });

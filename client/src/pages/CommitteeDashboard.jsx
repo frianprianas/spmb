@@ -5,6 +5,7 @@ import { UserPlus, Users, Save, ArrowRight, ArrowLeft } from 'lucide-react';
 
 const CommitteeDashboard = () => {
     const [activeTab, setActiveTab] = useState('new'); // 'new' or 'list'
+    const [filterType, setFilterType] = useState('all'); // 'all', 'online', 'offline'
     const [departments, setDepartments] = useState([]);
     const [students, setStudents] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -666,10 +667,35 @@ const CommitteeDashboard = () => {
                     </div>
                 ) : (
                     <div className="glass" style={{ padding: '2rem', overflowX: 'auto' }}>
+                        {/* Filter Buttons */}
+                        <div style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem', justifyContent: 'flex-start' }}>
+                            {['all', 'online', 'offline'].map(type => (
+                                <button
+                                    key={type}
+                                    onClick={() => setFilterType(type)}
+                                    style={{
+                                        padding: '0.5rem 1.5rem',
+                                        borderRadius: '2rem',
+                                        border: '1px solid var(--border)',
+                                        background: filterType === type ? 'var(--primary)' : 'var(--glass)',
+                                        color: filterType === type ? 'white' : 'var(--text-muted)',
+                                        cursor: 'pointer',
+                                        fontWeight: '500',
+                                        textTransform: 'capitalize',
+                                        transition: 'all 0.2s',
+                                        boxShadow: filterType === type ? '0 2px 4px rgba(0,0,0,0.1)' : 'none'
+                                    }}
+                                >
+                                    {type === 'all' ? 'Semua Jalur' : `Jalur ${type}`}
+                                </button>
+                            ))}
+                        </div>
+
                         <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '2000px', fontSize: '0.9rem' }}>
                             <thead>
                                 <tr style={{ background: '#f8fafc', borderBottom: '2px solid var(--border)', textAlign: 'left' }}>
                                     <th style={{ padding: '1rem', borderRight: '1px solid var(--border)' }}>No</th>
+                                    <th style={{ padding: '1rem', borderRight: '1px solid var(--border)' }}>Jalur</th>
                                     <th style={{ padding: '1rem', borderRight: '1px solid var(--border)' }}>Nama Lengkap</th>
                                     <th style={{ padding: '1rem', borderRight: '1px solid var(--border)' }}>JK</th>
                                     <th style={{ padding: '1rem', borderRight: '1px solid var(--border)' }}>NISN</th>
@@ -689,9 +715,24 @@ const CommitteeDashboard = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {students.map((s, index) => (
+                                {students.filter(s => {
+                                    if (filterType === 'all') return true;
+                                    if (filterType === 'offline') return s.registrationType === 'offline';
+                                    if (filterType === 'online') return s.registrationType !== 'offline';
+                                    return true;
+                                }).map((s, index) => (
                                     <tr key={index} style={{ borderBottom: '1px solid var(--border)', background: index % 2 === 0 ? 'white' : '#fcfcfc' }}>
                                         <td style={{ padding: '0.8rem', borderRight: '1px solid #eee' }}>{index + 1}</td>
+                                        <td style={{ padding: '0.8rem', borderRight: '1px solid #eee' }}>
+                                            <span className={`badge ${s.registrationType === 'offline' ? 'badge-verified' : 'badge-pending'}`}
+                                                style={{
+                                                    background: s.registrationType === 'offline' ? '#dbeafe' : '#f3f4f6',
+                                                    color: s.registrationType === 'offline' ? '#1e40af' : '#374151',
+                                                    padding: '0.25rem 0.5rem', borderRadius: '0.25rem', fontSize: '0.75rem', fontWeight: '600'
+                                                }}>
+                                                {s.registrationType ? s.registrationType.toUpperCase() : 'ONLINE'}
+                                            </span>
+                                        </td>
                                         <td style={{ padding: '0.8rem', borderRight: '1px solid #eee', fontWeight: 'bold' }}>{s.User?.name}</td>
                                         <td style={{ padding: '0.8rem', borderRight: '1px solid #eee' }}>{s.fullData?.jenisKelamin}</td>
                                         <td style={{ padding: '0.8rem', borderRight: '1px solid #eee' }}>{s.fullData?.nisn}</td>
