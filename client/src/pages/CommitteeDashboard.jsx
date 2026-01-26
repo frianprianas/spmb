@@ -613,7 +613,7 @@ const CommitteeDashboard = () => {
                         display: 'flex', alignItems: 'center', gap: '0.5rem'
                     }}
                 >
-                    <Users size={18} /> Data Pendaftar Offline
+                    <Users size={18} /> Data Pendaftar
                 </button>
             </div>
 
