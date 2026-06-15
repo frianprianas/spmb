@@ -219,7 +219,7 @@ const Register = () => {
                                 <select name="departmentId" value={formData.departmentId} onChange={handleChange} required style={{ padding: '0.8rem' }}>
                                     <option value="">Pilih Jurusan</option>
                                     {departments.map(d => (
-                                        <option key={d.id} value={d.id}>{d.name} (Sisa Kuota: {d.quota})</option>
+                                        <option key={d.id} value={d.id}>{d.name}</option>
                                     ))}
                                 </select>
                             </div>
